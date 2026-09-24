@@ -7,10 +7,10 @@
 <meta name="description" content="Cabinet d'expertise comptable, audit, social et juridique à Paris et en Île-de-France. Reprenez le contrôle de votre entreprise avec Auditec.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
+<body class="dark-hero">
 <nav id="nav">
   <a href="index.html" class="logo">
     <span class="logo-box"><img src="assets/img/logo-icon-navy.png" alt="Auditec"></span>
@@ -24,11 +24,11 @@
     <div class="nav-item">
       <a href="expertises/index.html">Nos expertises</a>
       <div class="dropdown">
-        <a href="expertises/audit.html">Audit & commissariat aux comptes</a>
-        <a href="expertises/comptable-fiscal.html">Expertise comptable & fiscale</a>
-        <a href="expertises/social.html">Gestion sociale</a>
-        <a href="expertises/juridique.html">Service juridique</a>
-        <a href="expertises/patrimoine.html">Patrimoine & missions d'exception</a>
+        <a href="expertises/audit.html">Audit <span class="amp">&</span> commissariat aux comptes</a>
+        <a href="expertises/comptable-fiscal.html">Conseil Comptable <span class="amp">&</span> Fiscal</a>
+        <a href="expertises/social.html">Social <span class="amp">&</span> Ressources Humaines</a>
+        <a href="expertises/juridique.html">Juridique <span class="amp">&</span> Vie des Sociétés</a>
+        <a href="expertises/patrimoine.html">Gestion de Patrimoine</a>
       </div>
     </div>
     <div class="nav-item">
@@ -55,54 +55,92 @@
 </div>
 <main>
 
-<section class="hero">
+<section class="hero" id="hero">
+  <div class="hero-stage" id="heroStage" aria-hidden="true">
+    <div class="hero-scene is-active" style="background-image:url('assets/img/photos/hero-accueil.jpg');"></div>
+  </div>
+  <div class="hero-video-tint"></div>
   <div class="wrap">
-    <div class="hero-copy reveal in">
-      <span class="eyebrow">Cabinet d'expertise, nouvelle génération</span>
-      <h1>Reprenez le contrôle de <em>votre entreprise.</em></h1>
-      <p>Un cabinet qui allie 50 ans d'expertise à une exigence de clarté, pour donner aux dirigeants les moyens de piloter leur croissance avec sérénité. Comptabilité, social, juridique et audit : quatre expertises pensées pour se répondre plutôt que pour s'empiler.</p>
-      <div class="hero-ctas">
+    <div class="hero-copy">
+      <span class="eyebrow on-dark hero-in" style="--d:.1s">Expertise comptable, audit et conseil depuis 1976</span>
+      <h1 class="split-words">50 ans d'expertise, <em>cinq métiers qui se répondent.</em></h1>
+      <p class="hero-in" style="--d:1.1s">Comptabilité, social, juridique, audit, patrimoine : fini les prestataires dispersés qui découvrent vos problèmes après coup. Un seul cabinet, une seule vision de votre entreprise.</p>
+      <div class="hero-ctas hero-in" style="--d:1.3s">
         <a href="contact.html" class="btn-primary">Prendre rendez-vous</a>
-        <a href="approche.html" class="btn-ghost">Découvrir notre approche</a>
+        <a href="approche.html" class="btn-ghost btn-ghost-dark">Découvrir notre approche</a>
       </div>
-      <div class="trust-line">
+      <div class="trust-line trust-line-dark hero-in" style="--d:1.5s">
         <span class="trust-item"><img src="assets/img/logo-oec.svg" alt="Ordre des Experts-Comptables" class="logo-oec"> Membre de l'Ordre des Experts-Comptables</span>
         <span class="trust-item"><img src="assets/img/logo-cncc.svg" alt="CNCC"> Compagnie Nationale des Commissaires aux Comptes</span>
       </div>
     </div>
-    <div class="hero-visual reveal in">
-      <div class="hero-frame"></div>
-      <div class="hero-img" id="heroImg"><div class="kb"></div><div class="hero-caption">Auditec Paris · 21 Bd Poissonnière</div></div>
-    </div>
   </div>
-</section>
+  <div class="hero-foot">
+    <div class="hero-progress" id="heroProgress"></div>
+    <span class="hero-caption" id="heroCaption"></span>
+    <button class="hero-pause" id="heroPause" type="button" aria-label="Mettre en pause l'animation d'arrière-plan">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14"/><rect x="14" y="5" width="4" height="14"/></svg>
+    </button>
+  </div>
+  </section>
 
-<section class="section tight">
-  <div class="wrap">
-    <div class="section-head center reveal">
-      <span class="eyebrow">Nos implantations</span>
-      <h2>Trois cabinets, à vos côtés en Île-de-France.</h2>
-      <p>Chaque bureau dispose de sa propre équipe et de sa propre adresse, pour un accompagnement de proximité.</p>
+<!-- Scènes du hero : photos des locaux (mouvement de caméra) et vidéos Pexels, enchaînées en fondu.
+     Pour ajouter / retirer une vidéo : modifier cette liste. type = "video" ou "image". move = "push" (avancée) ou "pan" (travelling). -->
+<script type="application/json" id="heroScenes">
+[
+  {"type":"image","src":"assets/img/photos/hero-accueil.jpg","move":"push","duration":7,"caption":"L'accueil, boulevard Poissonnière"},
+  {"type":"video","src":"https://videos.pexels.com/video-files/3201746/3201746-hd_1920_1080_25fps.mp4","duration":9},
+  {"type":"image","src":"assets/img/photos/hero-verriere.jpg","move":"pan","duration":7,"caption":"L'équipe, sous la verrière"},
+  {"type":"video","src":"https://videos.pexels.com/video-files/3254006/3254006-uhd_2560_1440_25fps.mp4","duration":9},
+  {"type":"image","src":"assets/img/photos/hero-salle-reunion.jpg","move":"push","duration":7,"caption":"La salle de réunion"},
+  {"type":"image","src":"assets/img/photos/hero-open-space.jpg","move":"pan","duration":7,"caption":"L'open space"}
+]
+</script>
+
+<div class="ribbon" aria-hidden="true">
+  <div class="ribbon-track">
+    <span>Commissariat aux comptes</span><i></i><span>Conseil fiscal</span><i></i><span>Paie et DSN</span><i></i><span>Approbation des comptes</span><i></i><span>Création d'entreprise</span><i></i><span>Transmission</span><i></i><span>Holding</span><i></i><span>Facturation électronique</span><i></i>
+    <span>Commissariat aux comptes</span><i></i><span>Conseil fiscal</span><i></i><span>Paie et DSN</span><i></i><span>Approbation des comptes</span><i></i><span>Création d'entreprise</span><i></i><span>Transmission</span><i></i><span>Holding</span><i></i><span>Facturation électronique</span><i></i>
+  </div>
+</div>
+
+<section class="section xp-section" id="expertises">
+  <div class="wrap xp-layout">
+    <div>
+      <div class="section-head reveal">
+        <span class="eyebrow">Nos expertises</span>
+        <h2>Cinq pôles qui travaillent sur le même dossier : le vôtre.</h2>
+        <p>Votre expert-comptable, votre gestionnaire de paie et votre juriste se parlent. Vous n'avez plus à faire le lien.</p>
+      </div>
+      <div class="xp-list">
+        <a class="xp-row reveal" href="expertises/audit.html" data-img="assets/img/photos/salle-reunion-table.jpg">
+          <span class="xp-name">Audit <span class="amp">&amp;</span> Commissariat aux comptes</span>
+          <span class="xp-desc">Certification des comptes, audits contractuels, missions d'apport et de fusion.</span><svg class="xp-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="xp-row reveal" href="expertises/comptable-fiscal.html" data-img="assets/img/photos/open-space-horizontal.jpg">
+          <span class="xp-name">Conseil Comptable <span class="amp">&amp;</span> Fiscal</span>
+          <span class="xp-desc">Révision, optimisation fiscale, tableaux de bord : le conseil avant la saisie.</span><svg class="xp-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="xp-row reveal" href="expertises/social.html" data-img="assets/img/photos/verriere-equipe-horizontal.jpg">
+          <span class="xp-name">Social <span class="amp">&amp;</span> Ressources Humaines</span>
+          <span class="xp-desc">Paie, déclarations sociales, contrats et accompagnement RH de vos équipes.</span><svg class="xp-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="xp-row reveal" href="expertises/juridique.html" data-img="assets/img/photos/salle-reunion-cheminee.jpg">
+          <span class="xp-name">Juridique <span class="amp">&amp;</span> Vie des Sociétés</span>
+          <span class="xp-desc">Création d'entreprise, approbation des comptes, opérations sur le capital.</span><svg class="xp-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="xp-row reveal" href="expertises/patrimoine.html" data-img="assets/img/photos/salon-attente.jpg">
+          <span class="xp-name">Gestion de Patrimoine</span>
+          <span class="xp-desc">Structuration du patrimoine du dirigeant, cession, transmission.</span><svg class="xp-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
     </div>
-    <div class="res-grid stagger">
-      <a href="bureaux/paris.html" class="res-card reveal">
-        <div class="media media-wide res-thumb" style="background-image:url('assets/img/photos/reception.jpg');"><div class="kb"></div><div class="tint"></div></div>
-        <span class="eyebrow" style="margin-bottom:6px;">Siège</span>
-        <h3>Auditec Paris</h3><p>21 Boulevard Poissonnière, 75002 Paris</p>
-        <span class="lnk">Voir la fiche →</span>
-      </a>
-      <a href="bureaux/houilles.html" class="res-card reveal">
-        <div class="media media-wide res-thumb" style="background-image:url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=500&q=80');"><div class="kb"></div><div class="tint"></div></div>
-        <span class="eyebrow" style="margin-bottom:6px;">Yvelines</span>
-        <h3>Auditec Houilles</h3><p>112 Boulevard Henri Barbusse, 78800 Houilles</p>
-        <span class="lnk">Voir la fiche →</span>
-      </a>
-      <a href="bureaux/ferrieres.html" class="res-card reveal">
-        <div class="media media-wide res-thumb" style="background-image:url('https://images.unsplash.com/photo-1568992687947-868a62a9f521?auto=format&fit=crop&w=500&q=80');"><div class="kb"></div><div class="tint"></div></div>
-        <span class="eyebrow" style="margin-bottom:6px;">Seine-et-Marne</span>
-        <h3>Auditec Ferrières</h3><p>19 Avenue James de Rothschild, 77164 Ferrières-en-Brie</p>
-        <span class="lnk">Voir la fiche →</span>
-      </a>
+    <div class="xp-visual" id="xpVisual" aria-hidden="true">
+      <div class="xp-img is-active" style="background-image:url('assets/img/photos/salle-reunion-table.jpg');"></div>
+      <div class="xp-img" style="background-image:url('assets/img/photos/open-space-horizontal.jpg');"></div>
+      <div class="xp-img" style="background-image:url('assets/img/photos/verriere-equipe-horizontal.jpg');"></div>
+      <div class="xp-img" style="background-image:url('assets/img/photos/salle-reunion-cheminee.jpg');"></div>
+      <div class="xp-img" style="background-image:url('assets/img/photos/salon-attente.jpg');"></div>
     </div>
   </div>
 </section>
@@ -127,7 +165,7 @@
 
 <section class="section pain-section" style="position:relative;overflow:hidden;">
   <div class="video-bg">
-    <video autoplay muted loop playsinline>
+    <video autoplay muted loop playsinline preload="metadata">
       <source src="https://videos.pexels.com/video-files/3256768/3256768-hd_720_1280_25fps.mp4" type="video/mp4">
     </video>
     <div class="video-tint"></div>
@@ -135,24 +173,24 @@
   <div class="wrap" style="position:relative;z-index:2;">
     <div class="section-head center on-dark reveal">
       <span class="eyebrow">Ce que vivent nos dirigeants</span>
-      <h2>Vous connaissez ces difficultés, nous aussi.</h2>
-      <p>La croissance d'une entreprise s'accompagne toujours des mêmes tensions. Notre rôle : les anticiper avant qu'elles ne deviennent des risques, en restant à vos côtés bien au-delà de la simple tenue des comptes.</p>
+      <h2>Vous connaissez ces difficultés. Nous aussi.</h2>
+      <p>Croissance, contrôle, décision stratégique : les mêmes tensions reviennent toujours. Notre rôle est de les voir venir avant qu'elles ne vous coûtent.</p>
     </div>
     <div class="pain-grid stagger">
       <div class="pain-card reveal">
         <svg class="pain-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 4h16v16H4z"/><path d="M8 9h8M8 13h8M8 17h4"/></svg>
-        <h3>La complexité fiscale et sociale vous ralentit</h3>
-        <p>La réglementation évolue plus vite que vos équipes ne peuvent suivre. Chaque décision non éclairée devient un risque silencieux, parfois coûteux des mois plus tard.</p>
+        <h3>La réglementation va plus vite que vous</h3>
+        <p>Loi de finances, facturation électronique, DSN : chaque changement mal anticipé devient un risque, souvent découvert des mois plus tard.</p>
       </div>
       <div class="pain-card reveal">
         <svg class="pain-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 20V10M12 20V4M20 20v-7"/></svg>
-        <h3>Vous manquez de visibilité sur vos chiffres</h3>
-        <p>Les rapports arrivent trop tard, trop denses, pour éclairer vos décisions au bon moment. Vous pilotez au rétroviseur plutôt qu'au tableau de bord.</p>
+        <h3>Vos chiffres arrivent trop tard</h3>
+        <p>Un bilan six mois après la clôture ne sert plus à décider. Vous pilotez au rétroviseur au lieu du tableau de bord.</p>
       </div>
       <div class="pain-card reveal">
         <svg class="pain-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-4 3-6.5 7-6.5s7 2.5 7 6.5"/></svg>
-        <h3>Vous êtes seul face à des choix stratégiques</h3>
-        <p>Cession, levée de fonds, structuration, transmission patrimoniale : les moments clés méritent un vrai partenaire, pas un simple prestataire qui constate les chiffres après coup.</p>
+        <h3>Vous décidez seul aux moments clés</h3>
+        <p>Cession, levée de fonds, transmission : ces décisions méritent un partenaire à vos côtés, pas un prestataire qui constate après coup.</p>
       </div>
     </div>
   </div>
@@ -165,10 +203,10 @@
       <h2>Une expertise éprouvée, une confiance méritée.</h2>
     </div>
     <div class="stats-grid">
-      <div class="stat reveal"><div class="stat-num" data-count="50">0</div><div class="stat-label">Ans d'expérience</div></div>
-      <div class="stat reveal"><div class="stat-num" data-count="1000">0</div><div class="stat-label">Clients accompagnés</div></div>
-      <div class="stat reveal"><div class="stat-num" data-count="60">0</div><div class="stat-label">Collaborateurs</div></div>
-      <div class="stat reveal"><div class="stat-num" data-count="3">0</div><div class="stat-label">Cabinets en Île-de-France</div></div>
+      <div class="stat reveal"><div class="stat-num" data-count="50">50</div><div class="stat-label">Ans d'expérience</div></div>
+      <div class="stat reveal"><div class="stat-num" data-count="1000" data-prefix="+">1000</div><div class="stat-label">Clients accompagnés</div></div>
+      <div class="stat reveal"><div class="stat-num" data-count="60">60</div><div class="stat-label">Collaborateurs</div></div>
+      <div class="stat reveal"><div class="stat-num" data-count="3">3</div><div class="stat-label">Cabinets en Île-de-France</div></div>
     </div>
   </div>
 </section>
@@ -178,29 +216,87 @@
     <div class="reveal">
       <span class="eyebrow on-dark">Notre approche</span>
       <h2>Nous transformons votre gestion en un véritable <em>outil de pilotage.</em></h2>
-      <p>Plutôt que d'empiler des prestations, nous structurons un système cohérent : chaque expertise nourrit les autres pour vous donner, à tout moment, une vision claire et actionnable de votre entreprise et de votre patrimoine.</p>
+      <p>Plutôt que d'empiler des prestations, nous construisons un système cohérent : chaque expertise nourrit les autres pour vous donner, à tout moment, une vision claire de votre entreprise et de votre patrimoine.</p>
     </div>
-    <div class="before-after reveal">
-      <div class="ba-head"><span>Avant</span><span>Avec Auditec</span></div>
-      <div class="ba-row"><div class="ba-cell before">Prestataires dispersés, peu coordonnés</div><div class="ba-cell after">Un seul cabinet, des expertises alignées</div></div>
-      <div class="ba-row"><div class="ba-cell before">Reporting tardif, difficile à lire</div><div class="ba-cell after">Une vision claire, disponible en continu</div></div>
-      <div class="ba-row"><div class="ba-cell before">Décisions prises dans l'incertitude</div><div class="ba-cell after">Un partenaire présent aux moments clés</div></div>
+    <div class="transform-cards stagger">
+      <div class="tcard reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+        <h3>Un seul cabinet, des expertises alignées</h3>
+        <p>Fini les prestataires dispersés : une seule équipe, coordonnée sur l'ensemble de vos enjeux.</p>
+      </div>
+      <div class="tcard reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 19V5M4 19h16M8 15l4-5 3 3 4-6"/></svg>
+        <h3>Une vision claire, disponible en continu</h3>
+        <p>Des chiffres à jour, lisibles à tout moment, pas seulement à la clôture.</p>
+      </div>
+      <div class="tcard reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+        <h3>Un partenaire présent aux moments clés</h3>
+        <p>Cession, levée de fonds, contrôle : nous sommes là avant que la décision ne devienne urgente.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="section alt">
+<section class="section locaux">
+  <div class="wrap">
+    <div class="locaux-head reveal">
+      <div>
+        <span class="eyebrow">Le siège</span>
+        <h2>21 boulevard Poissonnière, <span class="nowrap">Paris 2<sup>e</sup>.</span></h2>
+      </div>
+      <p>Un immeuble haussmannien au cœur de Paris, pensé pour recevoir nos clients et faire travailler nos équipes ensemble.</p>
+    </div>
+  </div>
+  <div class="photo-marquee-wrap reveal">
+    <div class="photo-marquee">
+      <div class="pm-item"><img src="assets/img/photos/accueil-large.jpg" alt="L'accueil du cabinet" loading="lazy"></div><div class="pm-item"><img src="assets/img/photos/salle-reunion-vue-ensemble.jpg" alt="La salle de réunion" loading="lazy"></div><div class="pm-item"><img src="assets/img/photos/couloir-salon.jpg" alt="Le couloir et le salon d'attente" loading="lazy"></div><div class="pm-item"><img src="assets/img/photos/verriere-equipe-premier-plan.jpg" alt="L'équipe au travail sous la verrière" loading="lazy"></div><div class="pm-item"><img src="assets/img/photos/fauteuil-fenetre.jpg" alt="Détail de la salle de réunion" loading="lazy"></div><div class="pm-item"><img src="assets/img/photos/open-space-allee.jpg" alt="L'open space" loading="lazy"></div><div class="pm-item"><img src="assets/img/photos/detail-bouquet-cheminee.jpg" alt="Cheminée de la salle de réunion" loading="lazy"></div><div class="pm-item"><img src="assets/img/photos/couloir-porte.jpg" alt="Couloir vers la salle de réunion" loading="lazy"></div><div class="pm-item"><img src="assets/img/photos/motif-chevrons.jpg" alt="Le motif à chevrons de l'accueil" loading="lazy"></div><div class="pm-item" aria-hidden="true"><img src="assets/img/photos/accueil-large.jpg" alt="" loading="lazy"></div><div class="pm-item" aria-hidden="true"><img src="assets/img/photos/salle-reunion-vue-ensemble.jpg" alt="" loading="lazy"></div><div class="pm-item" aria-hidden="true"><img src="assets/img/photos/couloir-salon.jpg" alt="" loading="lazy"></div><div class="pm-item" aria-hidden="true"><img src="assets/img/photos/verriere-equipe-premier-plan.jpg" alt="" loading="lazy"></div><div class="pm-item" aria-hidden="true"><img src="assets/img/photos/fauteuil-fenetre.jpg" alt="" loading="lazy"></div><div class="pm-item" aria-hidden="true"><img src="assets/img/photos/open-space-allee.jpg" alt="" loading="lazy"></div><div class="pm-item" aria-hidden="true"><img src="assets/img/photos/detail-bouquet-cheminee.jpg" alt="" loading="lazy"></div><div class="pm-item" aria-hidden="true"><img src="assets/img/photos/couloir-porte.jpg" alt="" loading="lazy"></div><div class="pm-item" aria-hidden="true"><img src="assets/img/photos/motif-chevrons.jpg" alt="" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section tight alt">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Nos implantations</span>
+      <h2>Trois cabinets, à vos côtés en Île-de-France.</h2>
+      <p>Chaque bureau dispose de sa propre équipe, pour un accompagnement de proximité.</p>
+    </div>
+    <div class="res-grid stagger">
+      <a href="bureaux/paris.html" class="res-card reveal">
+        <div class="media media-wide res-thumb" style="background-image:url('assets/img/photos/accueil-comptoir-logo.jpg');"><div class="kb"></div><div class="tint"></div></div>
+        <span class="eyebrow" style="margin-bottom:6px;">Siège</span>
+        <h3>Auditec Paris</h3><p>21 Boulevard Poissonnière, 75002 Paris</p>
+        <span class="lnk">Voir la fiche →</span>
+      </a>
+      <a href="bureaux/houilles.html" class="res-card reveal">
+        <div class="media media-wide res-thumb" style="background-image:url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=500&q=80');"><div class="kb"></div><div class="tint"></div></div>
+        <span class="eyebrow" style="margin-bottom:6px;">Yvelines</span>
+        <h3>Auditec Houilles</h3><p>112 Boulevard Henri Barbusse, 78800 Houilles</p>
+        <span class="lnk">Voir la fiche →</span>
+      </a>
+      <a href="bureaux/ferrieres.html" class="res-card reveal">
+        <div class="media media-wide res-thumb" style="background-image:url('https://images.unsplash.com/photo-1568992687947-868a62a9f521?auto=format&fit=crop&w=500&q=80');"><div class="kb"></div><div class="tint"></div></div>
+        <span class="eyebrow" style="margin-bottom:6px;">Seine-et-Marne</span>
+        <h3>Auditec Ferrières</h3><p>19 Avenue James de Rothschild, 77164 Ferrières-en-Brie</p>
+        <span class="lnk">Voir la fiche →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
   <div class="wrap">
     <div class="patrimoine">
       <div class="reveal">
         <span class="eyebrow">Aller plus loin</span>
-        <h2>Patrimoine & missions d'exception.</h2>
+        <h2>Gestion de Patrimoine.</h2>
         <div class="gradient-panel" style="margin-top:24px;">
-          <p>Au-delà de la gestion courante, certains moments demandent un accompagnement sur mesure : structuration patrimoniale du dirigeant, transmission d'entreprise, cession, levée de fonds. Nous mobilisons alors nos associés les plus expérimentés pour vous accompagner sur ces enjeux qui sortent du cadre comptable classique.</p>
+          <p>Votre entreprise et votre patrimoine personnel ne se pilotent pas séparément. Rémunération du dirigeant, holding, cession, transmission : nous mobilisons nos associés les plus expérimentés pour les décisions qui dépassent le cadre comptable.</p>
         </div>
         <a href="expertises/patrimoine.html" class="btn-ghost" style="margin-top:28px;">Découvrir cet accompagnement</a>
       </div>
-      <div class="media media-tall reveal" style="background-image:url('https://images.unsplash.com/photo-1760454658505-c33b5714632f?auto=format&fit=crop&w=700&q=80');">
+      <div class="media media-tall reveal" style="background-image:url('assets/img/photos/salon-attente.jpg');">
         <div class="kb"></div><div class="tint"></div>
       </div>
     </div>
