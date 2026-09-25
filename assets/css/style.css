@@ -697,3 +697,52 @@ body.dark-hero nav:not(.scrolled) .nav-alt:hover{border-color:var(--gold-soft);c
   .nav-alt{margin-left:auto;}
 }
 @media(min-width:961px) and (max-width:1240px){.navlinks{margin-right:24px;}}
+
+/* =========================================================
+   V4 - Organisation : titres au-dessus de leur texte, blocs encadrés
+   ========================================================= */
+/* Titre et texte d'introduction empilés, jamais séparés gauche / droite */
+.split-head,.locaux-head{display:block;max-width:780px;margin-bottom:44px;}
+.split-head p,.locaux-head p{margin-top:16px;max-width:680px;}
+.split-head h2{font-size:clamp(32px,3.6vw,46px);}
+
+/* Frise : chaque étape dans une carte */
+.timeline{grid-template-columns:repeat(3,1fr);gap:20px;border-top:none;}
+.timeline li{background:var(--white);border:1px solid var(--border);border-radius:6px;padding:30px 28px;}
+.section:not(.alt) .timeline li{background:var(--bg-alt);border-color:transparent;}
+.timeline li::before{display:none;}
+.tl-date{font-size:34px;padding-bottom:14px;margin-bottom:16px;border-bottom:1px solid var(--border);}
+
+/* Étapes du premier rendez-vous : encadrées */
+.steps li{background:var(--bg-alt);border:none;border-radius:6px;padding:30px 28px;}
+
+/* Pages d'expertise */
+.crumb{display:inline-block;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-dim);text-decoration:none;margin-bottom:34px;}
+.crumb:hover{color:var(--gold);}
+.xp-page-hero{padding:150px 0 70px;}
+.xp-hero{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center;}
+.xp-hero h1{font-size:clamp(38px,4.4vw,58px);line-height:1.08;margin-top:10px;}
+.xp-hero .lead{max-width:560px;}
+.xp-hero-ctas{margin-top:34px;}
+.xp-hero-img{aspect-ratio:4/3;border-radius:6px;background-size:cover;background-position:center;background-color:var(--bg-alt);}
+.xp-body{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start;}
+.xp-card{background:var(--white);border:1px solid var(--border);border-radius:6px;padding:42px 40px;}
+.xp-card-soft{background:var(--bg-alt);border-color:transparent;}
+.xp-card h2{font-size:30px;line-height:1.15;margin:10px 0 20px;padding-bottom:18px;border-bottom:1px solid var(--border);}
+.xp-card-soft h2{border-bottom-color:#E2E1DD;}
+.xp-card-text p{color:var(--ink-dim);font-size:15.5px;line-height:1.8;}
+.xp-card-text p + p{margin-top:14px;}
+.xp-hint{font-size:13px;color:var(--ink-faint);margin:-6px 0 4px;}
+.xp-card .term-list{margin-top:14px;background:transparent;gap:0;border-top:1px solid var(--border);}
+.xp-card .term-item{background:transparent;padding:18px 2px;border-bottom:1px solid var(--border);font-size:15.5px;color:var(--ink);font-weight:500;}
+.xp-card .term-item:hover{background:transparent;color:var(--gold);}
+.xp-card .term-desc{background:transparent;}
+.xp-card .term-desc p{padding:0 2px;}
+/* Cartes « En détail » : titre souligné, texte dessous */
+.res-card h3{padding-bottom:14px;margin-bottom:14px;border-bottom:1px solid var(--border);}
+@media(max-width:960px){
+  .xp-hero,.xp-body,.timeline{grid-template-columns:1fr;gap:28px;}
+  .xp-card{padding:30px 24px;}
+  .xp-page-hero{padding-top:120px;}
+}
+@media(max-width:960px){.timeline{border-left:none;padding-left:0;} .timeline li{padding:26px 22px;}}
