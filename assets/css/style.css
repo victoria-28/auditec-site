@@ -687,3 +687,13 @@ body.dark-hero nav:not(.scrolled) .nav-alt:hover{border-color:var(--gold-soft);c
 .sim-note{font-size:13.5px;}
 .sim-res strong{font-size:clamp(24px,2.3vw,31px);white-space:nowrap;}
 .nav-alt{border-color:#C9CACD;}
+/* Menu centré, bien séparé du logo */
+@media(min-width:1241px){
+  .navlinks{position:absolute;left:50%;transform:translateX(-50%);gap:40px;}
+  .nav-alt{margin-left:auto;}
+}
+@media(min-width:961px) and (max-width:1240px){
+  .navlinks{gap:26px;margin-left:48px;}
+  .nav-alt{margin-left:auto;}
+}
+@media(min-width:961px) and (max-width:1240px){.navlinks{margin-right:24px;}}
