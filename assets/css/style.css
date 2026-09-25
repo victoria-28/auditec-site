@@ -746,3 +746,36 @@ body.dark-hero nav:not(.scrolled) .nav-alt:hover{border-color:var(--gold-soft);c
   .xp-page-hero{padding-top:120px;}
 }
 @media(max-width:960px){.timeline{border-left:none;padding-left:0;} .timeline li{padding:26px 22px;}}
+
+/* Animations d'arrivée des images d'expertise */
+/* Cartes : l'image arrive en zoom arrière, puis grossit légèrement au survol */
+.res-card .res-thumb .kb{inset:0;animation:none;transform:scale(1.28);transition:transform 1.8s cubic-bezier(.22,1,.36,1);}
+.res-card.in .res-thumb .kb{transform:scale(1);}
+.res-card:hover .res-thumb .kb{transform:scale(1.08);transition-duration:.9s;}
+.res-card .res-thumb{clip-path:inset(0 0 100% 0);transition:clip-path 1.2s cubic-bezier(.22,1,.36,1);}
+.res-card.in .res-thumb{clip-path:inset(0 0 0 0);}
+.stagger .res-card:nth-child(2) .res-thumb,.stagger .res-card:nth-child(2) .kb{transition-delay:.12s;}
+.stagger .res-card:nth-child(3) .res-thumb,.stagger .res-card:nth-child(3) .kb{transition-delay:.24s;}
+.stagger .res-card:nth-child(4) .res-thumb,.stagger .res-card:nth-child(4) .kb{transition-delay:.36s;}
+.stagger .res-card:nth-child(5) .res-thumb,.stagger .res-card:nth-child(5) .kb{transition-delay:.48s;}
+.res-card:hover .kb{transition-delay:0s!important;}
+
+/* Page d'expertise : la photo se dévoile et se rapproche, puis continue de bouger doucement */
+.xp-hero-img{position:relative;overflow:hidden;clip-path:inset(0 0 0 100% round 6px);
+  animation:xpUnveil 1.4s cubic-bezier(.77,0,.18,1) .25s forwards;}
+.xp-hero-zoom{position:absolute;inset:0;background-size:cover;background-position:center;transform:scale(1.3);
+  animation:xpZoomIn 2.2s cubic-bezier(.22,1,.36,1) .25s forwards, xpDrift 18s ease-in-out 2.5s infinite alternate;}
+@keyframes xpUnveil{to{clip-path:inset(0 0 0 0 round 6px);}}
+@keyframes xpZoomIn{to{transform:scale(1.04);}}
+@keyframes xpDrift{from{transform:scale(1.04);}to{transform:scale(1.14) translate(-1.5%,-1%);}}
+
+/* Accueil : la photo de la liste des expertises arrive en zoom arrière */
+.xp-visual{clip-path:inset(100% 0 0 0 round 4px 120px 4px 4px);transition:clip-path 1.4s cubic-bezier(.77,0,.18,1);}
+.xp-visual.in{clip-path:inset(0 0 0 0 round 4px 120px 4px 4px);}
+.xp-visual .xp-img.is-active{animation:xpZoomOut 2s cubic-bezier(.22,1,.36,1);}
+@keyframes xpZoomOut{from{transform:scale(1.25);}to{transform:scale(1);}}
+
+@media (prefers-reduced-motion: reduce){
+  .res-card .res-thumb,.xp-hero-img,.xp-visual{clip-path:none!important;animation:none!important;}
+  .xp-hero-zoom,.res-card .res-thumb .kb{animation:none!important;transform:none!important;}
+}
