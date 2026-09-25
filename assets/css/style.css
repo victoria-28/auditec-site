@@ -672,3 +672,18 @@ body.dark-hero nav:not(.scrolled) .nav-alt:hover{border-color:var(--gold-soft);c
 }
 .pole-links a{display:block;position:relative;padding-right:30px;}
 .pole-links a::after{position:absolute;right:4px;top:50%;transform:translateY(-50%);}
+/* Simulateurs plus lisibles */
+.sim-card{padding:48px 48px 44px;min-height:540px;}
+.sim-head h3{font-size:36px;}
+.sim-field{margin-bottom:34px;}
+.sim-label{font-size:14px;margin-bottom:6px;}
+.sim-field output{font-family:'Cormorant Garamond',Garamond,serif;font-size:40px;font-weight:500;margin-bottom:18px;line-height:1.1;}
+.sim-field input[type=range]{height:8px;border-radius:8px;}
+.sim-field input[type=range]::-webkit-slider-thumb{width:28px;height:28px;border-width:4px;}
+.sim-field input[type=range]::-moz-range-thumb{width:22px;height:22px;border-width:4px;}
+.sim-res{padding:24px 20px;}
+.sim-res span{font-size:13px;}
+.sim-res strong{font-size:34px;}
+.sim-note{font-size:13.5px;}
+.sim-res strong{font-size:clamp(24px,2.3vw,31px);white-space:nowrap;}
+.nav-alt{border-color:#C9CACD;}
