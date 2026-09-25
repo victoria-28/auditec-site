@@ -24,7 +24,7 @@
     <div class="nav-item">
       <a href="../expertises/index.html">Nos expertises</a>
       <div class="dropdown">
-        <a href="../expertises/audit.html">Audit <span class="amp">&</span> commissariat aux comptes</a>
+        <a href="../expertises/audit.html">Audit <span class="amp">&</span> Commissariat aux comptes</a>
         <a href="../expertises/comptable-fiscal.html">Conseil Comptable <span class="amp">&</span> Fiscal</a>
         <a href="../expertises/social.html">Social <span class="amp">&</span> Ressources Humaines</a>
         <a href="../expertises/juridique.html">Juridique <span class="amp">&</span> Vie des Sociétés</a>
@@ -43,6 +43,7 @@
   <button class="nav-burger" id="navBurger" aria-label="Menu">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
   </button>
+  <a href="../espace-dirigeant.html" class="nav-alt">Espace dirigeant</a>
   <a href="../contact.html" class="nav-cta">Prendre rendez-vous</a>
 </nav>
 <div class="mobile-menu" id="mobileMenu">
@@ -51,6 +52,7 @@
   <a href="../cabinet.html">Le cabinet</a>
   <a href="../bureaux/index.html">Nos bureaux</a>
   <a href="index.html">Ressources</a>
+  <a href="../espace-dirigeant.html">Espace dirigeant</a>
   <a href="../contact.html" class="btn-primary mob-cta">Prendre rendez-vous</a>
 </div>
 <main>
@@ -59,13 +61,41 @@
   <div class="reveal in">
     <span class="eyebrow">Ressources</span>
     <h1>Ce que les dirigeants <em>doivent anticiper.</em></h1>
-    <p class="lead">La réglementation évolue plus vite que vos équipes ne peuvent suivre seules. Un hub premium pour garder une longueur d'avance et démontrer, au fil des sujets, l'expertise du cabinet.</p>
-    <div class="rule"></div>
+    <p class="lead">La réglementation évolue plus vite que vos équipes ne peuvent suivre seules. Simulateurs, échéancier et dossiers pratiques pour garder une longueur d'avance et démontrer, au fil des sujets, l'expertise du cabinet.</p>
   </div>
 </section>
+<section class="section sim-section" id="simulateurs">
+  <div class="wrap">
+    <div class="split-head reveal">
+      <div><span class="eyebrow">Simulateurs</span><h2>Chiffrez avant de décider.</h2></div>
+      <p>Des estimations immédiates, calculées avec les taux et barèmes en vigueur. Pour un calcul exact sur votre situation, un expert affine avec vous.</p>
+    </div>
+    <div class="sim-layout">
+      <div class="sim-card reveal" id="simCard" aria-live="polite"></div>
+      <div class="sim-list reveal" role="tablist"><button type="button" class="sim-tab is-active" data-sim="recrutement"><span class="sim-tab-t">Coût d'un recrutement</span><span class="sim-tab-d">Du salaire brut au coût total employeur</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button><button type="button" class="sim-tab" data-sim="remuneration"><span class="sim-tab-t">Salaire ou dividendes ?</span><span class="sim-tab-d">La rémunération optimale du dirigeant</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button><button type="button" class="sim-tab" data-sim="is"><span class="sim-tab-t">Impôt sur les sociétés</span><span class="sim-tab-d">Estimez votre IS et vos acomptes</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button><button type="button" class="sim-tab" data-sim="ik"><span class="sim-tab-t">Indemnités kilométriques</span><span class="sim-tab-d">Barème fiscal appliqué à vos trajets</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button><button type="button" class="sim-tab" data-sim="valeur"><span class="sim-tab-t">Valeur de votre entreprise</span><span class="sim-tab-d">Une première fourchette avant cession</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt ech-section" id="echeancier">
+  <div class="wrap ech-layout">
+    <div class="ech-intro reveal">
+      <span class="eyebrow">Échéancier</span>
+      <h2>Vos obligations des 30 prochains jours.</h2>
+      <p>Les principales échéances fiscales et sociales des entreprises, mises à jour automatiquement. Les dates qui tombent un week-end ou un jour férié sont reportées au jour ouvré suivant.</p>
+      <div class="ech-ctas">
+        <a href="../espace-dirigeant.html" class="btn-primary">Recevoir les rappels</a>
+        <button type="button" class="btn-ghost" id="echIcs">Ajouter à mon agenda</button>
+      </div>
+      <p class="ech-note">Calendrier indicatif pour une société à l'IS clôturant au 31 décembre. Vos dates exactes figurent dans votre espace dirigeant.</p>
+    </div>
+    <ol class="ech-list reveal" id="echList"></ol>
+  </div>
+</section>
+
 <section class="section tight">
   <div class="wrap">
-    <div class="res-grid stagger">
+    <div class="res-grid res-grid-2 stagger">
       <a href="reformes.html" class="res-card reveal">
         <svg class="res-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 4h16v16H4z"/><path d="M8 9h8M8 13h8M8 17h4"/></svg>
         <h3>Réformes en cours</h3><p>Facturation électronique, réforme des retraites, loi de finances : plusieurs dossiers, mis à jour au fil de l'actualité réglementaire.</p>
@@ -77,30 +107,29 @@
         <span class="lnk">Parcourir les articles →</span>
       </a>
     </div>
-    <p class="reveal" style="margin-top:32px;color:var(--ink-faint);font-size:13px;font-style:italic;">Les simulateurs et outils interactifs seront ajoutés dans une prochaine version du site.</p>
   </div>
 </section>
 <section class="section alt">
   <div class="wrap">
     <div class="section-head reveal">
       <span class="eyebrow">Le blog du cabinet</span>
-      <h2>Nos dernières news.</h2>
+      <h2>Nos dernières actualités.</h2>
       <p>Directement issus du blog du cabinet, mis à jour régulièrement par nos équipes.</p>
     </div>
     <div class="res-grid stagger">
       <a href="blog/notre-cabinet-actualite-dirigeant.html" class="res-card reveal">
-        <div class="media media-wide res-thumb" style="background-image:url('../assets/img/photos/equipe-travail-3.jpg');"><div class="kb"></div><div class="tint"></div></div>
+        <div class="media media-wide res-thumb" style="background-image:url('../assets/img/photos/open-space-allee.jpg');"><div class="kb"></div><div class="tint"></div></div>
         <span class="eyebrow" style="margin-bottom:6px;">Actualités de notre cabinet</span>
         <h3>Notre cabinet au plus près de votre actualité de dirigeant</h3>
         <p>Nos collaborateurs suivent les évolutions réglementaires et les nouveautés qui peuvent impacter votre activité.</p>
-        <span class="lnk">Lire la news →</span>
+        <span class="lnk">Lire l’article →</span>
       </a>
       <a href="blog/reforme-des-retraites.html" class="res-card reveal">
         <div class="media media-wide res-thumb" style="background-image:url('../assets/img/photos/brochure-auditec.jpg');"><div class="kb"></div><div class="tint"></div></div>
         <span class="eyebrow" style="margin-bottom:6px;">Informations pour nos clients</span>
         <h3>Réforme des retraites</h3>
-        <p>Chaque année le COR (Conseil d'Orientation des Retraites) émet un rapport prévisionnel sur le financement du système de retraite par répartition français.</p>
-        <span class="lnk">Lire la news →</span>
+        <p>Chaque année le COR (Conseil d'orientation des retraites) émet un rapport prévisionnel sur le financement du système de retraite par répartition français.</p>
+        <span class="lnk">Lire l’article →</span>
       </a>
       <a href="reformes.html" class="res-card reveal">
         <div class="media media-wide res-thumb" style="background-image:url('../assets/img/photos/open-space-bureaux.jpg');"><div class="kb"></div><div class="tint"></div></div>
@@ -125,18 +154,51 @@
 </section>
 
 </main>
-<footer>
+<footer class="site-footer">
   <div class="wrap">
-    <span>© Auditec Paris · Expertise, Audit, Conseil</span>
-    <div class="fnav">
-      <a href="../expertises/index.html">Nos expertises</a>
-      <a href="../cabinet.html">Le cabinet</a>
-      <a href="index.html">Ressources</a>
-      <a href="../contact.html">Contact</a>
-      <a href="mailto:contact@auditec-paris.fr">contact@auditec-paris.fr</a>
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="../index.html" class="logo foot-logo">
+          <span class="logo-box"><img src="../assets/img/logo-icon-navy.png" alt=""></span>
+          <span class="logo-text"><span class="logo-word">AUDITEC</span><span class="logo-tag">Expertise · Audit · Conseil</span></span>
+        </a>
+        <p>Cabinet d'expertise comptable et de commissariat aux comptes depuis 1976. Trois cabinets en Île-de-France.</p>
+        <div class="foot-labels">
+          <span class="foot-label"><img src="../assets/img/logo-oec.svg" alt="" class="logo-oec"> Membre de l'Ordre des experts-comptables</span>
+          <span class="foot-label"><img src="../assets/img/logo-cncc.svg" alt=""> Membre de la Compagnie nationale des commissaires aux comptes</span>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h4>Expertises</h4>
+        <a href="../expertises/audit.html">Audit <span class="amp">&amp;</span> Commissariat aux comptes</a>
+        <a href="../expertises/comptable-fiscal.html">Conseil Comptable <span class="amp">&amp;</span> Fiscal</a>
+        <a href="../expertises/social.html">Social <span class="amp">&amp;</span> Ressources Humaines</a>
+        <a href="../expertises/juridique.html">Juridique <span class="amp">&amp;</span> Vie des Sociétés</a>
+        <a href="../expertises/patrimoine.html">Gestion de Patrimoine</a>
+      </div>
+      <div class="foot-col">
+        <h4>Le cabinet</h4>
+        <a href="../cabinet.html">Présentation</a>
+        <a href="../approche.html">Notre approche</a>
+        <a href="../bureaux/index.html">Nos bureaux</a>
+        <a href="../ressources/index.html">Ressources et simulateurs</a>
+        <a href="../espace-dirigeant.html">Espace dirigeant</a>
+      </div>
+      <div class="foot-col">
+        <h4>Nous joindre</h4>
+        <span>21 boulevard Poissonnière<br>75002 Paris</span>
+        <a href="tel:0153405340">01 53 40 53 40</a>
+        <a href="mailto:contact@auditec-paris.fr">contact@auditec-paris.fr</a>
+        <span>Du lundi au vendredi, 9h à 18h30</span>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Auditec. Photographies des locaux : Laura Briault.</span>
+      <span>Mentions légales et politique de confidentialité à venir</span>
     </div>
   </div>
 </footer>
 <script src="../assets/js/main.js"></script>
+<script src="../assets/js/ressources.js"></script>
 </body>
 </html>
