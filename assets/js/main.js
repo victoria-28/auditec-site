@@ -186,6 +186,15 @@ function initExpertiseList(){
     imgs.forEach((im, k) => im.classList.toggle('is-active', k === i));
   };
   rows.forEach((r, i) => { r.addEventListener('mouseenter', () => activate(i)); r.addEventListener('focus', () => activate(i)); });
+  // Dévoilement de la photo : on observe la section entière (la photo elle-même est masquée au départ)
+  const visual = document.getElementById('xpVisual');
+  const section = visual && visual.closest('section');
+  if (visual && section) {
+    if ('IntersectionObserver' in window && !REDUCED) {
+      const vo = new IntersectionObserver(es => { es.forEach(e => { if (e.isIntersecting) { visual.classList.add('in'); vo.disconnect(); } }); }, { threshold: 0.15 });
+      vo.observe(section);
+    } else visual.classList.add('in');
+  }
   if ('IntersectionObserver' in window) {
     const io = new IntersectionObserver(entries => {
       entries.forEach(e => { if (e.isIntersecting) activate(rows.indexOf(e.target)); });
