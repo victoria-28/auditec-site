@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=9">
+<link rel="stylesheet" href="../assets/css/style.css?v=10">
 </head>
 <body>
 <nav id="nav">
@@ -43,7 +43,7 @@
   <button class="nav-burger" id="navBurger" aria-label="Menu">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
   </button>
-  <a href="../espace-dirigeant.html" class="nav-alt">Espace dirigeant</a>
+  <a href="#outils" class="nav-alt">Espace dirigeant</a>
   <a href="../contact.html" class="nav-cta">Prendre rendez-vous</a>
 </nav>
 <div class="mobile-menu" id="mobileMenu">
@@ -52,7 +52,7 @@
   <a href="../cabinet.html">Le cabinet</a>
   <a href="../bureaux/index.html">Nos bureaux</a>
   <a href="index.html">Ressources</a>
-  <a href="../espace-dirigeant.html">Espace dirigeant</a>
+  <a href="#outils">Espace dirigeant</a>
   <a href="../contact.html" class="btn-primary mob-cta">Prendre rendez-vous</a>
 </div>
 <main>
@@ -64,7 +64,35 @@
     <p class="lead">La réglementation évolue plus vite que vos équipes ne peuvent suivre seules. Simulateurs, échéancier et dossiers pratiques pour garder une longueur d'avance et démontrer, au fil des sujets, l'expertise du cabinet.</p>
   </div>
 </section>
-<section class="section sim-section" id="simulateurs">
+<section class="section outils-section" id="outils">
+  <div class="wrap">
+    <div class="split-head reveal">
+      <span class="eyebrow">Espace dirigeant</span>
+      <h2>Vos outils, en un clic.</h2>
+      <p>Retrouvez ici les accès aux plateformes utilisées par le cabinet. Cliquez sur l'outil de votre choix pour rejoindre directement votre espace de connexion : dépôt de pièces, documents, tableaux de bord.</p>
+    </div>
+    <div class="outils-grid stagger">
+      <!-- Liens de connexion à confirmer par le cabinet -->
+      <a class="outil reveal" href="https://app.pennylane.com/" target="_blank" rel="noopener">
+        <span class="outil-name">Pennylane</span>
+        <span class="outil-desc">Comptabilité, factures et pièces justificatives</span>
+        <span class="outil-go">Se connecter →</span>
+      </a>
+      <a class="outil reveal" href="../contact.html">
+        <span class="outil-name">iSuite</span>
+        <span class="outil-desc">Espace de connexion : lien communiqué par votre interlocuteur</span>
+        <span class="outil-go">Demander mon accès →</span>
+      </a>
+      <a class="outil outil-help reveal" href="../contact.html">
+        <span class="outil-name">Besoin d'aide ?</span>
+        <span class="outil-desc">Identifiants perdus, nouvel utilisateur : votre équipe vous répond.</span>
+        <span class="outil-go">Nous contacter →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section alt sim-section" id="simulateurs">
   <div class="wrap">
     <div class="split-head reveal">
       <div><span class="eyebrow">Simulateurs</span><h2>Chiffrez avant de décider.</h2></div>
@@ -84,7 +112,7 @@
       <h2>Vos obligations des 30 prochains jours.</h2>
       <p>Les principales échéances fiscales et sociales des entreprises, mises à jour automatiquement. Les dates qui tombent un week-end ou un jour férié sont reportées au jour ouvré suivant.</p>
       <div class="ech-ctas">
-        <a href="../espace-dirigeant.html" class="btn-primary">Recevoir les rappels</a>
+        <a href="#outils" class="btn-primary">Recevoir les rappels</a>
         <button type="button" class="btn-ghost" id="echIcs">Ajouter à mon agenda</button>
       </div>
       <p class="ech-note">Calendrier indicatif pour une société à l'IS clôturant au 31 décembre. Vos dates exactes figurent dans votre espace dirigeant.</p>
@@ -182,7 +210,7 @@
         <a href="../approche.html">Notre approche</a>
         <a href="../bureaux/index.html">Nos bureaux</a>
         <a href="../ressources/index.html">Ressources et simulateurs</a>
-        <a href="../espace-dirigeant.html">Espace dirigeant</a>
+        <a href="#outils">Espace dirigeant</a>
       </div>
       <div class="foot-col">
         <h4>Nous joindre</h4>
@@ -198,7 +226,7 @@
     </div>
   </div>
 </footer>
-<script src="../assets/js/main.js?v=9"></script>
-<script src="../assets/js/ressources.js?v=9"></script>
+<script src="../assets/js/main.js?v=10"></script>
+<script src="../assets/js/ressources.js?v=10"></script>
 </body>
 </html>

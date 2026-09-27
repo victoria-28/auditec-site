@@ -779,3 +779,20 @@ body.dark-hero nav:not(.scrolled) .nav-alt:hover{border-color:var(--gold-soft);c
   .res-card .res-thumb,.xp-hero-img,.xp-visual{clip-path:none!important;animation:none!important;}
   .xp-hero-zoom,.res-card .res-thumb .kb{animation:none!important;transform:none!important;}
 }
+
+/* Espace dirigeant : section « Nos outils » */
+.outils-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.outil{display:flex;flex-direction:column;gap:10px;padding:34px 30px;background:var(--white);border:1px solid var(--border);border-radius:6px;
+  text-decoration:none;color:inherit;transition:border-color .25s, transform .35s cubic-bezier(.22,1,.36,1), box-shadow .35s;}
+.outil:hover{border-color:var(--navy-deep);transform:translateY(-4px);box-shadow:0 18px 40px -24px rgba(18,41,67,.35);}
+.outil-name{font-family:'Cormorant Garamond',Garamond,serif;font-size:30px;font-weight:600;color:var(--ink);padding-bottom:12px;border-bottom:1px solid var(--border);}
+.outil-desc{font-size:14.5px;line-height:1.65;color:var(--ink-dim);flex:1;}
+.outil-go{font-size:13.5px;color:var(--gold);font-weight:500;}
+.outil-help{background:var(--navy-deep);border-color:var(--navy-deep);}
+.outil-help .outil-name{color:var(--white);border-bottom-color:rgba(255,255,255,.15);}
+.outil-help .outil-desc{color:rgba(255,255,255,.7);} .outil-help .outil-go{color:var(--gold-soft);}
+@media(max-width:960px){.outils-grid{grid-template-columns:1fr;}}
+/* Page hub des expertises : moins d'espaces vides */
+.page-hub .section{padding:72px 0;}
+.page-hub .section.tight{padding:48px 0;}
+#outils,#simulateurs,#echeancier,#missions{scroll-margin-top:110px;}
