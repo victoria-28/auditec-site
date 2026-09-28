@@ -815,3 +815,4 @@ nav.scrolled{padding-top:16px;padding-bottom:16px;}
 .stat-label{font-size:11px;letter-spacing:.12em;}
 .ribbon span{font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:13px;letter-spacing:.14em;}
 @media(max-width:960px){.logo-img{height:36px;}}
+.logo-img{height:52px;} nav.scrolled .logo-img{height:46px;} @media(max-width:960px){.logo-img,nav.scrolled .logo-img{height:40px;}}
