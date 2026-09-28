@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Hanken+Grotesk:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=12">
+<link rel="stylesheet" href="assets/css/style.css?v=13">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 </head>
 <body>
@@ -26,6 +26,7 @@
         <a href="expertises/patrimoine.html">Gestion de Patrimoine</a>
       </div>
     </div>
+    <a href="parcours.html">Votre parcours</a>
     <div class="nav-item">
       <a href="cabinet.html">Le cabinet</a>
       <div class="dropdown">
@@ -44,7 +45,8 @@
 <div class="mobile-menu" id="mobileMenu">
   <a href="index.html">Accueil</a>
   <a href="expertises/index.html">Nos expertises</a>
-  <a href="cabinet.html">Le cabinet</a>
+  <a href="parcours.html">Votre parcours</a>
+    <a href="cabinet.html">Le cabinet</a>
   <a href="bureaux/index.html">Nos bureaux</a>
   <a href="ressources/index.html">Ressources</a>
   <a href="ressources/index.html#outils">Espace dirigeant</a>
@@ -56,17 +58,28 @@
   <div class="reveal in">
     <span class="eyebrow">Contact et rendez-vous</span>
     <h1>Rencontrons-nous.</h1>
-    <p class="lead">C'est simple, gratuit et sans engagement. Remplissez le formulaire ci-dessous ou appelez-nous directement au 01 53 40 53 40, un associé revient vers vous sous 48h.</p>
+    <p class="lead">C'est simple, gratuit et sans engagement. Faites le diagnostic en trois questions, remplissez le formulaire ou appelez-nous directement au 01 53 40 53 40, un associé revient vers vous sous 48h.</p>
   </div>
 </section>
-<section class="section tight">
+<section class="section tight diag-section alt" id="diagnostic">
+  <div class="wrap diag-layout">
+    <div class="reveal">
+      <span class="eyebrow">Diagnostic dirigeant</span>
+      <h2>Trois questions, une recommandation.</h2>
+      <p class="body-lg">Répondez en moins d'une minute : nous vous indiquons l'accompagnement le plus adapté, et votre demande est préremplie dans le formulaire.</p>
+      <p class="diag-skip">Vous savez déjà ce qu'il vous faut ? <a href="#formulaire">Passer directement au formulaire</a></p>
+    </div>
+    <div class="diag-card reveal" id="diagCard" aria-live="polite"></div>
+  </div>
+</section>
+<section class="section tight" id="formulaire">
   <div class="wrap">
     <div class="contact-grid">
       <div class="reveal">
         <div class="form-field"><label>Nom et prénom</label><input type="text" placeholder="Jeanne Dupont"></div>
         <div class="form-field"><label>Entreprise</label><input type="text" placeholder="Nom de votre entreprise"></div>
         <div class="form-field"><label>E-mail</label><input type="email" placeholder="vous@entreprise.com"></div>
-        <div class="form-field"><label>Votre besoin</label><textarea rows="4" placeholder="Décrivez brièvement votre besoin"></textarea></div>
+        <div class="form-field"><label>Votre besoin</label><textarea rows="5" id="besoin" placeholder="Décrivez brièvement votre besoin"></textarea></div>
         <a href="#" class="btn-primary">Envoyer ma demande</a>
       </div>
       <div class="reveal">
@@ -130,6 +143,7 @@
       <div class="foot-col">
         <h4>Le cabinet</h4>
         <a href="cabinet.html">Présentation</a>
+        <a href="parcours.html">Votre parcours</a>
         <a href="approche.html">Notre approche</a>
         <a href="bureaux/index.html">Nos bureaux</a>
         <a href="ressources/index.html">Ressources et simulateurs</a>
@@ -149,6 +163,7 @@
     </div>
   </div>
 </footer>
-<script src="assets/js/main.js?v=12"></script>
+<script src="assets/js/main.js?v=13"></script>
+<script src="assets/js/contact.js?v=13"></script>
 </body>
 </html>

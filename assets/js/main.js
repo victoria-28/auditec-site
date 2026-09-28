@@ -203,6 +203,28 @@ function initExpertiseList(){
   }
 }
 
+
+/* Accueil : onglets « À chaque étape » (clavier : flèches gauche / droite) */
+function initEtapes(){
+  const tabs = [...document.querySelectorAll('.et-tab')];
+  if (!tabs.length) return;
+  const panels = tabs.map(t => document.getElementById(t.getAttribute('aria-controls')));
+  const show = (i, focus) => {
+    tabs.forEach((t, k) => { const on = k === i; t.classList.toggle('is-active', on); t.setAttribute('aria-selected', on); t.tabIndex = on ? 0 : -1; });
+    panels.forEach((p, k) => { const on = k === i; p.hidden = !on; p.classList.toggle('is-active', on); });
+    if (focus) tabs[i].focus();
+  };
+  tabs.forEach((t, i) => {
+    t.addEventListener('click', () => show(i));
+    t.addEventListener('keydown', e => {
+      if (e.key === 'ArrowRight') { e.preventDefault(); show((i + 1) % tabs.length, true); }
+      if (e.key === 'ArrowLeft') { e.preventDefault(); show((i - 1 + tabs.length) % tabs.length, true); }
+    });
+  });
+  show(0);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+  initEtapes();
   initSplitWords(); initReveal(); initCounters(); initNav(); initTerms(); initHeroScenes(); initExpertiseList();
 });
