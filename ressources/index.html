@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Hanken+Grotesk:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=15">
+<link rel="stylesheet" href="../assets/css/style.css?v=16">
 <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
 </head>
 <body>
@@ -87,10 +87,9 @@
         <span class="outil-desc">Comptabilité, factures et pièces justificatives</span>
         <span class="outil-go">Se connecter ↗</span>
       </a>
-      <!-- MyCLI : adresse de connexion à renseigner (remplacer le lien ci-dessous) -->
-      <a class="outil reveal" href="#outils" data-a-renseigner="mycli">
-        <span class="outil-head"><span class="outil-logo outil-logo-txt" aria-hidden="true">M</span><span class="outil-name">MyCLI</span></span>
-        <span class="outil-desc">Votre espace client : documents, échanges et suivi de dossier</span>
+      <a class="outil reveal" href="https://my.silae.fr/" target="_blank" rel="noopener">
+        <span class="outil-head"><img class="outil-logo" src="https://www.google.com/s2/favicons?domain=silae.fr&sz=128" alt="" width="40" height="40" onerror="this.outerHTML='<span class=&quot;outil-logo outil-logo-txt&quot; aria-hidden=&quot;true&quot;>S</span>'"><span class="outil-name">MySilae</span></span>
+        <span class="outil-desc">Paie et RH : bulletins de salaire, congés, absences et documents salariés</span>
         <span class="outil-go">Se connecter ↗</span>
       </a>
       <a class="outil outil-help reveal" href="../contact.html">
@@ -107,27 +106,37 @@
     <div class="split-head reveal">
       <span class="eyebrow">Simulateurs</span>
       <h2>Chiffrez avant de décider.</h2>
-      <p>Les simulateurs officiels de l'Urssaf, mis à jour avec les taux en vigueur. Ils s'ouvrent dans un nouvel onglet ; pour un calcul exact sur votre situation, un expert affine avec vous.</p>
+      <p>Les simulateurs officiels de l'Urssaf et de l'administration fiscale, à jour des taux en vigueur. Ils s'ouvrent dans un nouvel onglet ; pour un calcul exact sur votre situation, un expert affine avec vous.</p>
     </div>
-    <div class="outils-grid outils-grid-4 stagger">
+    <div class="outils-grid outils-grid-3 stagger">
       <a class="outil reveal" href="https://mon-entreprise.urssaf.fr/simulateurs/salaire-brut-net" target="_blank" rel="noopener">
-        <span class="outil-head"><img onerror="this.outerHTML='<span class=&quot;outil-logo outil-logo-txt&quot; aria-hidden=&quot;true&quot;>U</span>'" class="outil-logo" src="https://www.google.com/s2/favicons?domain=urssaf.fr&sz=128" alt="" width="40" height="40"><span class="outil-name">Salaire d'un employé</span></span>
-        <span class="outil-desc">Du salaire brut au net, et le coût total pour l'entreprise.</span>
+        <span class="outil-head"><img class="outil-logo" src="https://www.google.com/s2/favicons?domain=urssaf.fr&sz=128" alt="" width="40" height="40" onerror="this.outerHTML='<span class=&quot;outil-logo outil-logo-txt&quot; aria-hidden=&quot;true&quot;>U</span>'"><span class="outil-name">Coût d'un recrutement</span></span>
+        <span class="outil-desc">Du salaire brut au net du salarié, et le coût total pour l'employeur.</span>
         <span class="outil-go">Simuler sur urssaf.fr ↗</span>
       </a>
-      <a class="outil reveal" href="https://mon-entreprise.urssaf.fr/simulateurs/sasu" target="_blank" rel="noopener">
-        <span class="outil-head"><img onerror="this.outerHTML='<span class=&quot;outil-logo outil-logo-txt&quot; aria-hidden=&quot;true&quot;>U</span>'" class="outil-logo" src="https://www.google.com/s2/favicons?domain=urssaf.fr&sz=128" alt="" width="40" height="40"><span class="outil-name">Salaire d'un dirigeant</span></span>
-        <span class="outil-desc">La rémunération nette d'un président de SAS ou de SASU, cotisations comprises.</span>
+      <div class="outil outil-multi reveal">
+        <span class="outil-head"><img class="outil-logo" src="https://www.google.com/s2/favicons?domain=urssaf.fr&sz=128" alt="" width="40" height="40" onerror="this.outerHTML='<span class=&quot;outil-logo outil-logo-txt&quot; aria-hidden=&quot;true&quot;>U</span>'"><span class="outil-name">Salaire ou dividendes ?</span></span>
+        <span class="outil-desc">La rémunération optimale du dirigeant : simulez votre salaire, puis vos dividendes.</span>
+        <span class="outil-links"><a href="https://mon-entreprise.urssaf.fr/simulateurs/sasu" target="_blank" rel="noopener">Salaire du dirigeant ↗</a><a href="https://mon-entreprise.urssaf.fr/simulateurs/dividendes" target="_blank" rel="noopener">Dividendes ↗</a></span>
+      </div>
+      <a class="outil reveal" href="https://mon-entreprise.urssaf.fr/simulateurs/impot-societe" target="_blank" rel="noopener">
+        <span class="outil-head"><img class="outil-logo" src="https://www.google.com/s2/favicons?domain=urssaf.fr&sz=128" alt="" width="40" height="40" onerror="this.outerHTML='<span class=&quot;outil-logo outil-logo-txt&quot; aria-hidden=&quot;true&quot;>U</span>'"><span class="outil-name">Impôt sur les sociétés</span></span>
+        <span class="outil-desc">Estimez votre IS à partir de votre bénéfice imposable.</span>
         <span class="outil-go">Simuler sur urssaf.fr ↗</span>
       </a>
-      <a class="outil reveal" href="https://mon-entreprise.urssaf.fr/simulateurs/dividendes" target="_blank" rel="noopener">
-        <span class="outil-head"><img onerror="this.outerHTML='<span class=&quot;outil-logo outil-logo-txt&quot; aria-hidden=&quot;true&quot;>U</span>'" class="outil-logo" src="https://www.google.com/s2/favicons?domain=urssaf.fr&sz=128" alt="" width="40" height="40"><span class="outil-name">Calcul des dividendes</span></span>
-        <span class="outil-desc">Ce qu'il vous reste après impôt et prélèvements sociaux.</span>
-        <span class="outil-go">Simuler sur urssaf.fr ↗</span>
+      <a class="outil reveal" href="https://www.impots.gouv.fr/particulier/questions/puis-je-effectuer-une-simulation-de-mes-frais-reels-de-deplacement-selon-le" target="_blank" rel="noopener">
+        <span class="outil-head"><img class="outil-logo" src="https://www.google.com/s2/favicons?domain=impots.gouv.fr&sz=128" alt="" width="40" height="40" onerror="this.outerHTML='<span class=&quot;outil-logo outil-logo-txt&quot; aria-hidden=&quot;true&quot;>I</span>'"><span class="outil-name">Indemnités kilométriques</span></span>
+        <span class="outil-desc">Le barème fiscal appliqué à vos trajets professionnels.</span>
+        <span class="outil-go">Simuler sur impots.gouv.fr ↗</span>
+      </a>
+      <a class="outil reveal" href="../contact.html">
+        <span class="outil-head"><span class="outil-logo outil-logo-txt" aria-hidden="true">A</span><span class="outil-name">Valeur de votre entreprise</span></span>
+        <span class="outil-desc">Une première fourchette avant cession, établie par un associé du cabinet à partir de vos comptes.</span>
+        <span class="outil-go">Demander une estimation →</span>
       </a>
       <a class="outil outil-help reveal" href="../contact.html">
         <span class="outil-head"><span class="outil-name">Un calcul sur mesure ?</span></span>
-        <span class="outil-desc">Salaire, dividendes ou les deux : un expert chiffre la meilleure option pour vous.</span>
+        <span class="outil-desc">Salaire, dividendes, fiscalité : un expert chiffre la meilleure option pour votre situation.</span>
         <span class="outil-go">Prendre rendez-vous →</span>
       </a>
     </div>
@@ -253,7 +262,7 @@
     </div>
   </div>
 </footer>
-<script src="../assets/js/main.js?v=15"></script>
-<script src="../assets/js/ressources.js?v=15"></script>
+<script src="../assets/js/main.js?v=16"></script>
+<script src="../assets/js/ressources.js?v=16"></script>
 </body>
 </html>

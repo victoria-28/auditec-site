@@ -935,3 +935,11 @@ nav.scrolled{padding-top:16px;padding-bottom:16px;}
 .res-chips a:hover{background:var(--navy-deep);border-color:var(--navy-deep);color:var(--white);}
 .res-ribbon{border-top:1px solid var(--border);}
 #articles{scroll-margin-top:110px;}
+.outils-grid-3{grid-template-columns:repeat(3,1fr);}
+@media(max-width:1100px){.outils-grid-3{grid-template-columns:1fr 1fr;}}
+@media(max-width:700px){.outils-grid-3{grid-template-columns:1fr;}}
+.outil-multi{cursor:default;}
+.outil-multi:hover{transform:none;box-shadow:none;border-color:var(--border);}
+.outil-links{display:flex;flex-wrap:wrap;gap:8px 18px;}
+.outil-links a{font-size:13.5px;color:var(--gold);font-weight:500;text-decoration:none;}
+.outil-links a:hover{text-decoration:underline;}
