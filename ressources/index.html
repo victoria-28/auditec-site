@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Hanken+Grotesk:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=13">
+<link rel="stylesheet" href="../assets/css/style.css?v=14">
 <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
 </head>
 <body>
@@ -69,19 +69,19 @@
       <p>Retrouvez ici les accès aux plateformes utilisées par le cabinet. Cliquez sur l'outil de votre choix pour rejoindre directement votre espace de connexion : dépôt de pièces, documents, tableaux de bord.</p>
     </div>
     <div class="outils-grid stagger">
-      <!-- Liens de connexion à confirmer par le cabinet -->
       <a class="outil reveal" href="https://app.pennylane.com/" target="_blank" rel="noopener">
-        <span class="outil-name">Pennylane</span>
+        <span class="outil-head"><img onerror="this.outerHTML='<span class=&quot;outil-logo outil-logo-txt&quot; aria-hidden=&quot;true&quot;>P</span>'" class="outil-logo" src="https://www.google.com/s2/favicons?domain=pennylane.com&sz=128" alt="" width="40" height="40"><span class="outil-name">Pennylane</span></span>
         <span class="outil-desc">Comptabilité, factures et pièces justificatives</span>
-        <span class="outil-go">Se connecter →</span>
+        <span class="outil-go">Se connecter ↗</span>
       </a>
-      <a class="outil reveal" href="../contact.html">
-        <span class="outil-name">iSuite</span>
-        <span class="outil-desc">Espace de connexion : lien communiqué par votre interlocuteur</span>
-        <span class="outil-go">Demander mon accès →</span>
+      <!-- MyCLI : adresse de connexion à renseigner (remplacer le lien ci-dessous) -->
+      <a class="outil reveal" href="#outils" data-a-renseigner="mycli">
+        <span class="outil-head"><span class="outil-logo outil-logo-txt" aria-hidden="true">M</span><span class="outil-name">MyCLI</span></span>
+        <span class="outil-desc">Votre espace client : documents, échanges et suivi de dossier</span>
+        <span class="outil-go">Se connecter ↗</span>
       </a>
       <a class="outil outil-help reveal" href="../contact.html">
-        <span class="outil-name">Besoin d'aide ?</span>
+        <span class="outil-head"><span class="outil-name">Besoin d'aide ?</span></span>
         <span class="outil-desc">Identifiants perdus, nouvel utilisateur : votre équipe vous répond.</span>
         <span class="outil-go">Nous contacter →</span>
       </a>
@@ -92,17 +92,36 @@
 <section class="section alt sim-section" id="simulateurs">
   <div class="wrap">
     <div class="split-head reveal">
-      <div><span class="eyebrow">Simulateurs</span><h2>Chiffrez avant de décider.</h2></div>
-      <p>Des estimations immédiates, calculées avec les taux et barèmes en vigueur. Pour un calcul exact sur votre situation, un expert affine avec vous.</p>
+      <span class="eyebrow">Simulateurs</span>
+      <h2>Chiffrez avant de décider.</h2>
+      <p>Les simulateurs officiels de l'Urssaf, mis à jour avec les taux en vigueur. Ils s'ouvrent dans un nouvel onglet ; pour un calcul exact sur votre situation, un expert affine avec vous.</p>
     </div>
-    <div class="sim-layout">
-      <div class="sim-card reveal" id="simCard" aria-live="polite"></div>
-      <div class="sim-list reveal" role="tablist"><button type="button" class="sim-tab is-active" data-sim="recrutement"><span class="sim-tab-t">Coût d'un recrutement</span><span class="sim-tab-d">Du salaire brut au coût total employeur</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button><button type="button" class="sim-tab" data-sim="remuneration"><span class="sim-tab-t">Salaire ou dividendes ?</span><span class="sim-tab-d">La rémunération optimale du dirigeant</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button><button type="button" class="sim-tab" data-sim="is"><span class="sim-tab-t">Impôt sur les sociétés</span><span class="sim-tab-d">Estimez votre IS et vos acomptes</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button><button type="button" class="sim-tab" data-sim="ik"><span class="sim-tab-t">Indemnités kilométriques</span><span class="sim-tab-d">Barème fiscal appliqué à vos trajets</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button><button type="button" class="sim-tab" data-sim="valeur"><span class="sim-tab-t">Valeur de votre entreprise</span><span class="sim-tab-d">Une première fourchette avant cession</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+    <div class="outils-grid outils-grid-4 stagger">
+      <a class="outil reveal" href="https://mon-entreprise.urssaf.fr/simulateurs/salaire-brut-net" target="_blank" rel="noopener">
+        <span class="outil-head"><img onerror="this.outerHTML='<span class=&quot;outil-logo outil-logo-txt&quot; aria-hidden=&quot;true&quot;>U</span>'" class="outil-logo" src="https://www.google.com/s2/favicons?domain=urssaf.fr&sz=128" alt="" width="40" height="40"><span class="outil-name">Salaire d'un employé</span></span>
+        <span class="outil-desc">Du salaire brut au net, et le coût total pour l'entreprise.</span>
+        <span class="outil-go">Simuler sur urssaf.fr ↗</span>
+      </a>
+      <a class="outil reveal" href="https://mon-entreprise.urssaf.fr/simulateurs/sasu" target="_blank" rel="noopener">
+        <span class="outil-head"><img onerror="this.outerHTML='<span class=&quot;outil-logo outil-logo-txt&quot; aria-hidden=&quot;true&quot;>U</span>'" class="outil-logo" src="https://www.google.com/s2/favicons?domain=urssaf.fr&sz=128" alt="" width="40" height="40"><span class="outil-name">Salaire d'un dirigeant</span></span>
+        <span class="outil-desc">La rémunération nette d'un président de SAS ou de SASU, cotisations comprises.</span>
+        <span class="outil-go">Simuler sur urssaf.fr ↗</span>
+      </a>
+      <a class="outil reveal" href="https://mon-entreprise.urssaf.fr/simulateurs/dividendes" target="_blank" rel="noopener">
+        <span class="outil-head"><img onerror="this.outerHTML='<span class=&quot;outil-logo outil-logo-txt&quot; aria-hidden=&quot;true&quot;>U</span>'" class="outil-logo" src="https://www.google.com/s2/favicons?domain=urssaf.fr&sz=128" alt="" width="40" height="40"><span class="outil-name">Calcul des dividendes</span></span>
+        <span class="outil-desc">Ce qu'il vous reste après impôt et prélèvements sociaux.</span>
+        <span class="outil-go">Simuler sur urssaf.fr ↗</span>
+      </a>
+      <a class="outil outil-help reveal" href="../contact.html">
+        <span class="outil-head"><span class="outil-name">Un calcul sur mesure ?</span></span>
+        <span class="outil-desc">Salaire, dividendes ou les deux : un expert chiffre la meilleure option pour vous.</span>
+        <span class="outil-go">Prendre rendez-vous →</span>
+      </a>
     </div>
   </div>
 </section>
 
-<section class="section alt ech-section" id="echeancier">
+<section class="section ech-section" id="echeancier">
   <div class="wrap ech-layout">
     <div class="ech-intro reveal">
       <span class="eyebrow">Échéancier</span>
@@ -221,7 +240,7 @@
     </div>
   </div>
 </footer>
-<script src="../assets/js/main.js?v=13"></script>
-<script src="../assets/js/ressources.js?v=13"></script>
+<script src="../assets/js/main.js?v=14"></script>
+<script src="../assets/js/ressources.js?v=14"></script>
 </body>
 </html>
