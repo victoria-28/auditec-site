@@ -927,3 +927,11 @@ nav.scrolled{padding-top:16px;padding-bottom:16px;}
 .outils-grid-4{grid-template-columns:repeat(4,1fr);}
 @media(max-width:1200px){.outils-grid-4{grid-template-columns:1fr 1fr;}}
 @media(max-width:700px){.outils-grid-4{grid-template-columns:1fr;}}
+/* Ressources : visuel et raccourcis en haut de page */
+.res-hero{padding-bottom:60px;}
+.res-hero .xp-hero-img{aspect-ratio:5/4;}
+.res-chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px;}
+.res-chips a{font-size:14px;padding:10px 20px;border:1px solid var(--border);border-radius:999px;color:var(--ink);text-decoration:none;transition:all .25s;}
+.res-chips a:hover{background:var(--navy-deep);border-color:var(--navy-deep);color:var(--white);}
+.res-ribbon{border-top:1px solid var(--border);}
+#articles{scroll-margin-top:110px;}
