@@ -113,7 +113,9 @@ function initHeroScenes(){
       const v = document.createElement('video');
       v.muted = true; v.playsInline = true; v.loop = true; v.preload = 'auto';
       v.setAttribute('muted', ''); v.setAttribute('playsinline', '');
-      v.src = s.src; el.appendChild(v); el._video = v;
+      if (s.poster) v.poster = s.poster;
+      const mp4ok = v.canPlayType('video/mp4; codecs="avc1.42E01E"');
+      v.src = (s.webm && !mp4ok) ? s.webm : s.src; el.appendChild(v); el._video = v;
       v.addEventListener('error', () => { el._failed = true; });
     } else {
       el.style.backgroundImage = "url('" + s.src + "')";
