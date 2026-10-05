@@ -226,7 +226,58 @@ function initEtapes(){
   show(0);
 }
 
+
+/* Frise d'histoire : la ligne dorée se trace quand la section arrive à l'écran */
+function initHistoire(){
+  document.querySelectorAll('.hx-section, .pc-timeline-wrap').forEach(sec => {
+    if (!('IntersectionObserver' in window)) { sec.classList.add('in-view'); return; }
+    const o = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { sec.classList.add('in-view'); o.disconnect(); } }), { threshold: .25 });
+    o.observe(sec);
+  });
+}
+
+
+/* Votre parcours : frise collante avec progression, chiffres animés, léger effet de profondeur sur les photos */
+function initParcours(){
+  const bar = document.getElementById('pcProgress');
+  const stages = [...document.querySelectorAll('.pc-stage')];
+  if (!stages.length) return;
+  const steps = [...document.querySelectorAll('.pc-sticky .pc-step')];
+  const imgs = [...document.querySelectorAll('.pc-img .xp-hero-zoom')];
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let ticking = false;
+  const update = () => {
+    ticking = false;
+    const first = stages[0].getBoundingClientRect().top + window.scrollY - window.innerHeight * .5;
+    const last = stages[stages.length - 1].getBoundingClientRect().bottom + window.scrollY - window.innerHeight * .5;
+    const p = Math.min(1, Math.max(0, (window.scrollY - first) / (last - first)));
+    if (bar) bar.style.width = (p * 100) + '%';
+    let cur = -1;
+    stages.forEach((st, i) => { if (st.getBoundingClientRect().top < window.innerHeight * .5) cur = i; });
+    steps.forEach((el, i) => el.classList.toggle('is-current', i === cur));
+    if (!reduce) imgs.forEach(im => {
+      const r = im.parentElement.getBoundingClientRect();
+      const c = (r.top + r.height / 2 - window.innerHeight / 2) / window.innerHeight;
+      im.style.transform = 'scale(1.12) translateY(' + (c * -6).toFixed(2) + '%)';
+    });
+  };
+  window.addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+  window.addEventListener('resize', update); update();
+  const counts = document.querySelectorAll('.pc-count');
+  if ('IntersectionObserver' in window && !reduce) {
+    const o = new IntersectionObserver(es => es.forEach(e => {
+      if (!e.isIntersecting) return; o.unobserve(e.target);
+      const el = e.target, to = +el.dataset.to, t0 = performance.now(), d = 1400;
+      const step = now => { const k = Math.min(1, (now - t0) / d); el.textContent = Math.round(to * (1 - Math.pow(1 - k, 3))); if (k < 1) requestAnimationFrame(step); };
+      el.textContent = '0'; requestAnimationFrame(step);
+    }), { threshold: .6 });
+    counts.forEach(c => o.observe(c));
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+  initParcours();
+  initHistoire();
   initEtapes();
   initSplitWords(); initReveal(); initCounters(); initNav(); initTerms(); initHeroScenes(); initExpertiseList();
 });

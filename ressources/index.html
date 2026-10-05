@@ -8,22 +8,22 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Hanken+Grotesk:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=18">
+<link rel="stylesheet" href="../assets/css/style.css?v=27">
 <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
 </head>
-<body>
+<body class="page-res">
 <nav id="nav">
   <a href="../index.html" class="logo" aria-label="Auditec, accueil"><img src="../assets/img/logo-auditec.svg" alt="Auditec" class="logo-img logo-dark"><img src="../assets/img/logo-auditec-blanc.svg" alt="" class="logo-img logo-light"></a>
   <div class="navlinks">
     <a href="../index.html">Accueil</a>
     <div class="nav-item">
-      <a href="../expertises/index.html">Nos expertises</a>
+      <a href="../expertises/index.html">Nos métiers</a>
       <div class="dropdown">
-        <a href="../expertises/audit.html">Audit <span class="amp">&</span> Commissariat aux comptes</a>
-        <a href="../expertises/comptable-fiscal.html">Conseil Comptable <span class="amp">&</span> Fiscal</a>
-        <a href="../expertises/social.html">Social <span class="amp">&</span> Ressources Humaines</a>
-        <a href="../expertises/juridique.html">Juridique <span class="amp">&</span> Vie des Sociétés</a>
-        <a href="../expertises/patrimoine.html">Gestion de Patrimoine</a>
+        <a href="../expertises/audit.html">Audit et commissariat aux comptes</a>
+        <a href="../expertises/comptable-fiscal.html">Expertise comptable et fiscale</a>
+        <a href="../expertises/social.html">Conseil social et ressources humaines</a>
+        <a href="../expertises/juridique.html">Formalités juridiques et vie des sociétés</a>
+        <a href="../expertises/patrimoine.html">Gestion patrimoniale</a>
       </div>
     </div>
     <a href="../parcours.html">Votre parcours</a>
@@ -32,6 +32,7 @@
       <div class="dropdown">
         <a href="../cabinet.html">Présentation</a>
         <a href="../bureaux/index.html">Nos bureaux</a>
+        <a href="../nous-rejoindre.html">Nous rejoindre</a>
       </div>
     </div>
     <a href="index.html" class="active">Ressources</a>
@@ -44,10 +45,11 @@
 </nav>
 <div class="mobile-menu" id="mobileMenu">
   <a href="../index.html">Accueil</a>
-  <a href="../expertises/index.html">Nos expertises</a>
+  <a href="../expertises/index.html">Nos métiers</a>
   <a href="../parcours.html">Votre parcours</a>
     <a href="../cabinet.html">Le cabinet</a>
   <a href="../bureaux/index.html">Nos bureaux</a>
+  <a href="../nous-rejoindre.html">Nous rejoindre</a>
   <a href="index.html">Ressources</a>
   <a href="#outils">Espace dirigeant</a>
   <a href="../contact.html" class="btn-primary mob-cta">Prendre rendez-vous</a>
@@ -60,12 +62,12 @@
       <div class="reveal in">
         <span class="eyebrow">Ressources</span>
         <h1>Ce que les dirigeants <em>doivent anticiper.</em></h1>
-        <p class="lead">La réglementation évolue plus vite que vos équipes ne peuvent suivre seules. Simulateurs, échéancier et dossiers pratiques pour garder une longueur d'avance et démontrer, au fil des sujets, l'expertise du cabinet.</p>
+        <p class="lead">La réglementation évolue plus vite que vos équipes ne peuvent suivre seules. Simulateurs, calendrier et dossiers pratiques pour garder une longueur d'avance et démontrer, au fil des sujets, l'expertise du cabinet.</p>
         <div class="res-chips">
-          <a href="#outils">Vos outils</a><a href="#simulateurs">Simulateurs</a><a href="#echeancier">Échéancier</a><a href="#articles">Articles et dossiers</a>
+          <a href="#outils">Vos outils</a><a href="#simulateurs">Simulateurs</a><a href="#echeancier">Calendrier</a><a href="#articles">Articles et dossiers</a>
         </div>
       </div>
-      <div class="xp-hero-img"><div class="xp-hero-zoom" style="background-image:url('https://images.pexels.com/photos/8292880/pexels-photo-8292880.jpeg?auto=compress&cs=tinysrgb&w=1400');"></div></div>
+      <div class="xp-hero-img"><div class="xp-hero-zoom" style="background-image:url('../assets/img/photos/lounge.jpg');background-position:center 60%;"></div></div>
     </div>
   </div>
 </section>
@@ -81,7 +83,7 @@
       <h2>Vos outils, en un clic.</h2>
       <p>Retrouvez ici les accès aux plateformes utilisées par le cabinet. Cliquez sur l'outil de votre choix pour rejoindre directement votre espace de connexion : dépôt de pièces, documents, tableaux de bord.</p>
     </div>
-    <div class="outils-grid stagger">
+    <div class="outils-grid outils-grid-4 stagger">
       <a class="outil reveal" href="https://app.pennylane.com/" target="_blank" rel="noopener">
         <span class="outil-head"><img onerror="this.outerHTML='<span class=&quot;outil-logo outil-logo-txt&quot; aria-hidden=&quot;true&quot;>P</span>'" class="outil-logo" src="https://www.google.com/s2/favicons?domain=pennylane.com&sz=128" alt="" width="40" height="40"><span class="outil-name">Pennylane</span></span>
         <span class="outil-desc">Comptabilité, factures et pièces justificatives</span>
@@ -91,6 +93,12 @@
         <span class="outil-head"><img class="outil-logo" src="https://www.google.com/s2/favicons?domain=silae.fr&sz=128" alt="" width="40" height="40" onerror="this.outerHTML='<span class=&quot;outil-logo outil-logo-txt&quot; aria-hidden=&quot;true&quot;>S</span>'"><span class="outil-name">MySilae</span></span>
         <span class="outil-desc">Paie et RH : bulletins de salaire, congés, absences et documents salariés</span>
         <span class="outil-go">Se connecter ↗</span>
+      </a>
+      <!-- iSuite : chaque cabinet a sa propre adresse de connexion ; remplacer href par celle d'Auditec -->
+      <a class="outil reveal" href="../contact.html">
+        <span class="outil-head"><span class="outil-logo outil-logo-txt" aria-hidden="true">i</span><span class="outil-name">iSuite</span></span>
+        <span class="outil-desc">Dépôt et consultation de vos pièces, indicateurs et échanges sécurisés avec le cabinet</span>
+        <span class="outil-go">Se connecter →</span>
       </a>
       <a class="outil outil-help reveal" href="../contact.html">
         <span class="outil-head"><span class="outil-name">Besoin d'aide ?</span></span>
@@ -146,7 +154,7 @@
 <section class="section ech-section" id="echeancier">
   <div class="wrap ech-layout">
     <div class="ech-intro reveal">
-      <span class="eyebrow">Échéancier</span>
+      <span class="eyebrow">Calendrier</span>
       <h2>Vos obligations des 30 prochains jours.</h2>
       <p>Les principales échéances fiscales et sociales des entreprises, mises à jour automatiquement. Les dates qui tombent un week-end ou un jour férié sont reportées au jour ouvré suivant.</p>
       <div class="ech-ctas">
@@ -169,7 +177,7 @@
       </a>
       <a href="faq.html" class="res-card reveal">
         <svg class="res-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M5 5h14v14H5z"/><path d="M9 9h6v6H9z"/></svg>
-        <h3>Articles, conseils <span class="amp">&</span> FAQ</h3><p>Une bibliothèque vivante plutôt qu'un blog figé, alimentée par le cabinet, l'actu à retenir, un conseil vidéo, un dossier zoom.</p>
+        <h3>Articles, conseils et FAQ</h3><p>Une bibliothèque vivante plutôt qu'un blog figé, alimentée par le cabinet, l'actu à retenir, un conseil vidéo, un dossier zoom.</p>
         <span class="lnk">Parcourir les articles →</span>
       </a>
     </div>
@@ -232,12 +240,12 @@
         </div>
       </div>
       <div class="foot-col">
-        <h4>Expertises</h4>
-        <a href="../expertises/audit.html">Audit <span class="amp">&amp;</span> Commissariat aux comptes</a>
-        <a href="../expertises/comptable-fiscal.html">Conseil Comptable <span class="amp">&amp;</span> Fiscal</a>
-        <a href="../expertises/social.html">Social <span class="amp">&amp;</span> Ressources Humaines</a>
-        <a href="../expertises/juridique.html">Juridique <span class="amp">&amp;</span> Vie des Sociétés</a>
-        <a href="../expertises/patrimoine.html">Gestion de Patrimoine</a>
+        <h4>Nos métiers</h4>
+        <a href="../expertises/audit.html">Audit et commissariat aux comptes</a>
+        <a href="../expertises/comptable-fiscal.html">Expertise comptable et fiscale</a>
+        <a href="../expertises/social.html">Conseil social et ressources humaines</a>
+        <a href="../expertises/juridique.html">Formalités juridiques et vie des sociétés</a>
+        <a href="../expertises/patrimoine.html">Gestion patrimoniale</a>
       </div>
       <div class="foot-col">
         <h4>Le cabinet</h4>
@@ -245,6 +253,7 @@
         <a href="../parcours.html">Votre parcours</a>
         <a href="../approche.html">Notre approche</a>
         <a href="../bureaux/index.html">Nos bureaux</a>
+        <a href="../nous-rejoindre.html">Nous rejoindre</a>
         <a href="../ressources/index.html">Ressources et simulateurs</a>
         <a href="#outils">Espace dirigeant</a>
       </div>
@@ -253,6 +262,7 @@
         <span>21 boulevard Poissonnière<br>75002 Paris</span>
         <a href="tel:0153405340">01 53 40 53 40</a>
         <a href="mailto:contact@auditec-paris.fr">contact@auditec-paris.fr</a>
+        <a href="https://www.linkedin.com/company/auditec-expertica-fideci/" target="_blank" rel="noopener">LinkedIn ↗</a>
         <span>Du lundi au vendredi, 9h à 18h30</span>
       </div>
     </div>
@@ -262,7 +272,7 @@
     </div>
   </div>
 </footer>
-<script src="../assets/js/main.js?v=18"></script>
-<script src="../assets/js/ressources.js?v=18"></script>
+<script src="../assets/js/main.js?v=27"></script>
+<script src="../assets/js/ressources.js?v=27"></script>
 </body>
 </html>

@@ -8,22 +8,22 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Hanken+Grotesk:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=18">
+<link rel="stylesheet" href="assets/css/style.css?v=27">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 </head>
-<body>
+<body class="dark-hero">
 <nav id="nav">
   <a href="index.html" class="logo" aria-label="Auditec, accueil"><img src="assets/img/logo-auditec.svg" alt="Auditec" class="logo-img logo-dark"><img src="assets/img/logo-auditec-blanc.svg" alt="" class="logo-img logo-light"></a>
   <div class="navlinks">
     <a href="index.html">Accueil</a>
     <div class="nav-item">
-      <a href="expertises/index.html">Nos expertises</a>
+      <a href="expertises/index.html">Nos métiers</a>
       <div class="dropdown">
-        <a href="expertises/audit.html">Audit <span class="amp">&</span> Commissariat aux comptes</a>
-        <a href="expertises/comptable-fiscal.html">Conseil Comptable <span class="amp">&</span> Fiscal</a>
-        <a href="expertises/social.html">Social <span class="amp">&</span> Ressources Humaines</a>
-        <a href="expertises/juridique.html">Juridique <span class="amp">&</span> Vie des Sociétés</a>
-        <a href="expertises/patrimoine.html">Gestion de Patrimoine</a>
+        <a href="expertises/audit.html">Audit et commissariat aux comptes</a>
+        <a href="expertises/comptable-fiscal.html">Expertise comptable et fiscale</a>
+        <a href="expertises/social.html">Conseil social et ressources humaines</a>
+        <a href="expertises/juridique.html">Formalités juridiques et vie des sociétés</a>
+        <a href="expertises/patrimoine.html">Gestion patrimoniale</a>
       </div>
     </div>
     <a href="parcours.html" class="active">Votre parcours</a>
@@ -32,6 +32,7 @@
       <div class="dropdown">
         <a href="cabinet.html">Présentation</a>
         <a href="bureaux/index.html">Nos bureaux</a>
+        <a href="nous-rejoindre.html">Nous rejoindre</a>
       </div>
     </div>
     <a href="ressources/index.html">Ressources</a>
@@ -44,26 +45,34 @@
 </nav>
 <div class="mobile-menu" id="mobileMenu">
   <a href="index.html">Accueil</a>
-  <a href="expertises/index.html">Nos expertises</a>
+  <a href="expertises/index.html">Nos métiers</a>
   <a href="parcours.html">Votre parcours</a>
     <a href="cabinet.html">Le cabinet</a>
   <a href="bureaux/index.html">Nos bureaux</a>
+  <a href="nous-rejoindre.html">Nous rejoindre</a>
   <a href="ressources/index.html">Ressources</a>
   <a href="ressources/index.html#outils">Espace dirigeant</a>
   <a href="contact.html" class="btn-primary mob-cta">Prendre rendez-vous</a>
 </div>
 <main>
-<section class="page-hero">
-  <div class="wrap">
-    <div class="reveal in" style="padding-top:150px;">
-      <span class="eyebrow">Votre parcours</span>
-      <h1>Chaque étape de votre entreprise mérite <em>le bon expert.</em></h1>
-      <p class="lead">Nous organisons notre accompagnement autour de ce que vous vivez, pas de nos métiers. Où en êtes-vous ?</p>
-    </div>
-    <div class="pc-timeline reveal in" role="navigation" aria-label="Les étapes"><a href="#creer" class="pc-step"><span class="pc-dot"></span><span class="pc-n">01</span><strong>Je crée</strong><span>Création</span></a><a href="#piloter" class="pc-step"><span class="pc-dot"></span><span class="pc-n">02</span><strong>Je pilote</strong><span>Pilotage</span></a><a href="#securiser" class="pc-step"><span class="pc-dot"></span><span class="pc-n">03</span><strong>Je sécurise</strong><span>Conformité et audit</span></a><a href="#transmettre" class="pc-step"><span class="pc-dot"></span><span class="pc-n">04</span><strong>Je transmets</strong><span>Transmission</span></a><a href="#patrimoine" class="pc-step"><span class="pc-dot"></span><span class="pc-n">05</span><strong>Patrimoine</strong><span>Missions d'exception</span></a></div>
+<section class="cover">
+  <div class="cover-media" style="background-image:url('assets/img/photos/hero-salle-reunion.jpg');"></div>
+  <div class="cover-tint"></div>
+  <div class="wrap cover-inner">
+    <span class="eyebrow on-dark cover-in" style="--d:.1s">Votre parcours</span>
+    <h1 class="cover-in" style="--d:.3s">Chaque étape de votre entreprise mérite <em>le bon expert.</em></h1>
+    <p class="lead cover-in" style="--d:.55s">Nous organisons notre accompagnement autour de ce que vous vivez, pas de nos métiers. Où en êtes-vous ?</p>
+    <div class="hero-ctas cover-in" style="--d:.75s"><a href="#creer" class="btn-primary">Découvrir les étapes</a><a href="contact.html#diagnostic" class="btn-ghost btn-ghost-dark">Faire le diagnostic</a></div>
   </div>
+  <a href="#etapes" class="cover-scroll" aria-label="Défiler vers la suite"><span></span></a>
 </section>
-
+<div class="pc-sticky" id="etapes">
+  <div class="wrap">
+    <div class="pc-timeline pc-timeline-wrap" role="navigation" aria-label="Les étapes">
+      <span class="pc-progress" aria-hidden="true"><span id="pcProgress"></span></span><a href="#creer" class="pc-step"><span class="pc-dot"></span><span class="pc-n">01</span><strong>Je crée</strong><span>Création</span></a><a href="#piloter" class="pc-step"><span class="pc-dot"></span><span class="pc-n">02</span><strong>Je pilote</strong><span>Pilotage</span></a><a href="#securiser" class="pc-step"><span class="pc-dot"></span><span class="pc-n">03</span><strong>Je sécurise</strong><span>Conformité et audit</span></a><a href="#transmettre" class="pc-step"><span class="pc-dot"></span><span class="pc-n">04</span><strong>Je transmets</strong><span>Transmission</span></a><a href="#patrimoine" class="pc-step"><span class="pc-dot"></span><span class="pc-n">05</span><strong>Patrimoine</strong><span>Missions d'exception</span></a>
+    </div>
+  </div>
+</div>
 <section class="section pc-stage" id="creer">
   <div class="wrap">
     <div class="pc-top">
@@ -78,7 +87,7 @@
     <div class="pc-grid stagger">
       <div class="pc-box reveal"><h3>Ce que nous faisons</h3><ul class="pc-services"><li>Choix de la structure juridique</li><li>Business plan et prévisionnel</li><li>Statuts et immatriculation</li><li>Demande d'aides et prêt d'honneur</li></ul></div>
       <div class="pc-box reveal"><h3>Comment ça se passe</h3><ol class="pc-steps"><li><span class="pc-sn">1</span><div><strong>Rendez-vous de cadrage</strong><p>Une heure pour comprendre votre projet. Offert.</p></div></li><li><span class="pc-sn">2</span><div><strong>Montage chiffré</strong><p>Prévisionnel sur 3 ans et scénarios de rémunération.</p></div></li><li><span class="pc-sn">3</span><div><strong>Lancement</strong><p>Formalités, ouverture de votre espace dirigeant, premier point à 3 mois.</p></div></li></ol></div>
-      <div class="pc-box pc-kpi reveal"><strong>10 jours</strong><p>en moyenne entre le premier rendez-vous et l'immatriculation</p>
+      <div class="pc-box pc-kpi reveal"><strong><span class="pc-count" data-to="10">10</span> jours</strong><p>en moyenne entre le premier rendez-vous et l'immatriculation</p>
         <a href="contact.html" class="btn-primary">Parler à un expert création</a>
         <a href="https://mon-entreprise.urssaf.fr/simulateurs/sasu" target="_blank" rel="noopener" class="pc-res">Simulateur salaire d'un dirigeant ↗</a></div>
     </div>
@@ -98,7 +107,7 @@
     <div class="pc-grid stagger">
       <div class="pc-box reveal"><h3>Ce que nous faisons</h3><ul class="pc-services"><li>Expertise comptable et comptes annuels</li><li>Paie et déclarations sociales</li><li>Tableau de bord mensuel</li><li>Prévisionnel de trésorerie</li></ul></div>
       <div class="pc-box reveal"><h3>Comment ça se passe</h3><ol class="pc-steps"><li><span class="pc-sn">1</span><div><strong>Diagnostic de l'existant</strong><p>Vos outils, vos flux, vos besoins de reporting.</p></div></li><li><span class="pc-sn">2</span><div><strong>Mise en place</strong><p>Connexion bancaire, dématérialisation, espace dirigeant.</p></div></li><li><span class="pc-sn">3</span><div><strong>Rendez-vous mensuel</strong><p>30 minutes avec votre expert pour lire vos chiffres.</p></div></li></ol></div>
-      <div class="pc-box pc-kpi reveal"><strong>J+10</strong><p>vos indicateurs du mois, disponibles dix jours après la clôture</p>
+      <div class="pc-box pc-kpi reveal"><strong>J+<span class="pc-count" data-to="10">10</span></strong><p>vos indicateurs du mois, disponibles dix jours après la clôture</p>
         <a href="contact.html" class="btn-primary">Parler à un expert-comptable</a>
         <a href="https://mon-entreprise.urssaf.fr/simulateurs/salaire-brut-net" target="_blank" rel="noopener" class="pc-res">Simulateur salaire d'un employé ↗</a></div>
     </div>
@@ -118,7 +127,7 @@
     <div class="pc-grid stagger">
       <div class="pc-box reveal"><h3>Ce que nous faisons</h3><ul class="pc-services"><li>Commissariat aux comptes</li><li>Audit contractuel et due diligence</li><li>Reporting groupe (IFRS, US GAAP)</li><li>Secrétariat juridique annuel</li></ul></div>
       <div class="pc-box reveal"><h3>Comment ça se passe</h3><ol class="pc-steps"><li><span class="pc-sn">1</span><div><strong>Prise de connaissance</strong><p>Vos enjeux, vos risques, votre calendrier.</p></div></li><li><span class="pc-sn">2</span><div><strong>Mission</strong><p>Intervention sur site et à distance, points d'étape réguliers.</p></div></li><li><span class="pc-sn">3</span><div><strong>Restitution</strong><p>Un rapport clair et des recommandations concrètes.</p></div></li></ol></div>
-      <div class="pc-box pc-kpi reveal"><strong>50 ans</strong><p>d'expérience en audit légal et contractuel</p>
+      <div class="pc-box pc-kpi reveal"><strong><span class="pc-count" data-to="50">50</span> ans</strong><p>d'expérience en audit légal et contractuel</p>
         <a href="contact.html" class="btn-primary">Parler à un commissaire aux comptes</a>
         <a href="ressources/faq.html" class="pc-res">Questions fréquentes sur le commissariat aux comptes →</a></div>
     </div>
@@ -138,7 +147,7 @@
     <div class="pc-grid stagger">
       <div class="pc-box reveal"><h3>Ce que nous faisons</h3><ul class="pc-services"><li>Évaluation d'entreprise</li><li>Préparation et audit d'acquisition</li><li>Optimisation fiscale de la cession</li><li>Pacte Dutreil et transmission familiale</li></ul></div>
       <div class="pc-box reveal"><h3>Comment ça se passe</h3><ol class="pc-steps"><li><span class="pc-sn">1</span><div><strong>Entretien confidentiel</strong><p>Avec un associé, sur vos objectifs et votre calendrier.</p></div></li><li><span class="pc-sn">2</span><div><strong>Évaluation et plan</strong><p>Valorisation, scénarios fiscaux, feuille de route.</p></div></li><li><span class="pc-sn">3</span><div><strong>Accompagnement</strong><p>Jusqu'à la signature, aux côtés de vos avocats et banquiers.</p></div></li></ol></div>
-      <div class="pc-box pc-kpi reveal"><strong>2 à 3 ans</strong><p>la durée idéale de préparation d'une cession réussie</p>
+      <div class="pc-box pc-kpi reveal"><strong><span class="pc-count" data-to="2">2</span> à 3 ans</strong><p>la durée idéale de préparation d'une cession réussie</p>
         <a href="contact.html" class="btn-primary">Parler à un associé</a>
         <a href="ressources/faq.html" class="pc-res">Questions fréquentes →</a></div>
     </div>
@@ -158,10 +167,15 @@
     <div class="pc-grid stagger">
       <div class="pc-box reveal"><h3>Ce que nous faisons</h3><ul class="pc-services"><li>Création et structuration de holding</li><li>Levée de fonds</li><li>Stratégie de rémunération globale</li><li>Coordination avec votre notaire et votre gestionnaire</li></ul></div>
       <div class="pc-box reveal"><h3>Comment ça se passe</h3><ol class="pc-steps"><li><span class="pc-sn">1</span><div><strong>Entretien avec un associé</strong><p>Votre situation professionnelle et personnelle.</p></div></li><li><span class="pc-sn">2</span><div><strong>Étude patrimoniale</strong><p>Scénarios chiffrés et recommandations.</p></div></li><li><span class="pc-sn">3</span><div><strong>Mise en œuvre</strong><p>Suivi annuel et ajustements.</p></div></li></ol></div>
-      <div class="pc-box pc-kpi reveal"><strong>1</strong><p>associé dédié, du premier entretien à la mise en œuvre</p>
+      <div class="pc-box pc-kpi reveal"><strong><span class="pc-count" data-to="1">1</span></strong><p>associé dédié, du premier entretien à la mise en œuvre</p>
         <a href="contact.html" class="btn-primary">Demander un entretien confidentiel</a>
         <a href="https://mon-entreprise.urssaf.fr/simulateurs/dividendes" target="_blank" rel="noopener" class="pc-res">Simulateur calcul des dividendes ↗</a></div>
     </div>
+  </div>
+</section>
+<section class="pc-strip" aria-hidden="true">
+  <div class="photo-marquee-wrap">
+    <div class="photo-marquee"><div class="pm-item"><img src="assets/img/photos/accueil-large.jpg" alt="" loading="lazy"></div><div class="pm-item"><img src="assets/img/photos/salle-reunion-vue-ensemble.jpg" alt="" loading="lazy"></div><div class="pm-item"><img src="assets/img/photos/couloir-salon.jpg" alt="" loading="lazy"></div><div class="pm-item"><img src="assets/img/photos/fauteuil-fenetre.jpg" alt="" loading="lazy"></div><div class="pm-item"><img src="assets/img/photos/detail-bouquet-cheminee.jpg" alt="" loading="lazy"></div><div class="pm-item"><img src="assets/img/photos/salon-bleu-clair.jpg" alt="" loading="lazy"></div><div class="pm-item"><img src="assets/img/photos/accueil-large.jpg" alt="" loading="lazy"></div><div class="pm-item"><img src="assets/img/photos/salle-reunion-vue-ensemble.jpg" alt="" loading="lazy"></div><div class="pm-item"><img src="assets/img/photos/couloir-salon.jpg" alt="" loading="lazy"></div><div class="pm-item"><img src="assets/img/photos/fauteuil-fenetre.jpg" alt="" loading="lazy"></div><div class="pm-item"><img src="assets/img/photos/detail-bouquet-cheminee.jpg" alt="" loading="lazy"></div><div class="pm-item"><img src="assets/img/photos/salon-bleu-clair.jpg" alt="" loading="lazy"></div></div>
   </div>
 </section>
 <section class="cta-final pc-final">
@@ -187,12 +201,12 @@
         </div>
       </div>
       <div class="foot-col">
-        <h4>Expertises</h4>
-        <a href="expertises/audit.html">Audit <span class="amp">&amp;</span> Commissariat aux comptes</a>
-        <a href="expertises/comptable-fiscal.html">Conseil Comptable <span class="amp">&amp;</span> Fiscal</a>
-        <a href="expertises/social.html">Social <span class="amp">&amp;</span> Ressources Humaines</a>
-        <a href="expertises/juridique.html">Juridique <span class="amp">&amp;</span> Vie des Sociétés</a>
-        <a href="expertises/patrimoine.html">Gestion de Patrimoine</a>
+        <h4>Nos métiers</h4>
+        <a href="expertises/audit.html">Audit et commissariat aux comptes</a>
+        <a href="expertises/comptable-fiscal.html">Expertise comptable et fiscale</a>
+        <a href="expertises/social.html">Conseil social et ressources humaines</a>
+        <a href="expertises/juridique.html">Formalités juridiques et vie des sociétés</a>
+        <a href="expertises/patrimoine.html">Gestion patrimoniale</a>
       </div>
       <div class="foot-col">
         <h4>Le cabinet</h4>
@@ -200,6 +214,7 @@
         <a href="parcours.html">Votre parcours</a>
         <a href="approche.html">Notre approche</a>
         <a href="bureaux/index.html">Nos bureaux</a>
+        <a href="nous-rejoindre.html">Nous rejoindre</a>
         <a href="ressources/index.html">Ressources et simulateurs</a>
         <a href="ressources/index.html#outils">Espace dirigeant</a>
       </div>
@@ -208,6 +223,7 @@
         <span>21 boulevard Poissonnière<br>75002 Paris</span>
         <a href="tel:0153405340">01 53 40 53 40</a>
         <a href="mailto:contact@auditec-paris.fr">contact@auditec-paris.fr</a>
+        <a href="https://www.linkedin.com/company/auditec-expertica-fideci/" target="_blank" rel="noopener">LinkedIn ↗</a>
         <span>Du lundi au vendredi, 9h à 18h30</span>
       </div>
     </div>
@@ -217,6 +233,6 @@
     </div>
   </div>
 </footer>
-<script src="assets/js/main.js?v=18"></script>
+<script src="assets/js/main.js?v=27"></script>
 </body>
 </html>
