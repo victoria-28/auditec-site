@@ -8,12 +8,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Hanken+Grotesk:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=27">
+<link rel="stylesheet" href="assets/css/style.css?v=33">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 </head>
 <body class="dark-hero">
 <nav id="nav">
-  <a href="index.html" class="logo" aria-label="Auditec, accueil"><img src="assets/img/logo-auditec.svg" alt="Auditec" class="logo-img logo-dark"><img src="assets/img/logo-auditec-blanc.svg" alt="" class="logo-img logo-light"></a>
+  <a href="index.html" class="logo" aria-label="Auditec, accueil"><picture class="logo-dark"><source media="(max-width: 700px)" srcset="assets/img/logo-auditec-court.svg"><img src="assets/img/logo-auditec.svg" alt="Auditec" class="logo-img"></picture><picture class="logo-light"><source media="(max-width: 700px)" srcset="assets/img/logo-auditec-court-blanc.svg"><img src="assets/img/logo-auditec-blanc.svg" alt="" class="logo-img"></picture></a>
   <div class="navlinks">
     <a href="index.html" class="active">Accueil</a>
     <div class="nav-item">
@@ -83,18 +83,18 @@
      Pour ajouter / retirer une vidéo : modifier cette liste. type = "video" ou "image". move = "push" (avancée) ou "pan" (travelling). -->
 <script type="application/json" id="heroScenes">
 [
-  {"type":"image","src":"assets/img/photos/hero-accueil.jpg","move":"push","duration":7,"caption":"L'accueil, boulevard Poissonnière"},
-  {"type":"video","src":"https://videos.pexels.com/video-files/3201746/3201746-hd_1920_1080_25fps.mp4","duration":9},
-  {"type":"image","src":"assets/img/photos/salon-bleu.jpg","move":"push","duration":7,"caption":"Le salon bleu"},
+  {"type":"image","src":"assets/img/photos/hero-accueil.jpg","move":"push","duration":7},
+  {"type":"video","src":"https://videos.pexels.com/video-files/7821854/7821854-hd_1920_1080_30fps.mp4","duration":9},
+  {"type":"image","src":"assets/img/photos/salon-bleu.jpg","move":"push","duration":7},
   {"type":"video","src":"https://videos.pexels.com/video-files/3254006/3254006-uhd_2560_1440_25fps.mp4","duration":9},
-  {"type":"image","src":"assets/img/photos/hero-salle-reunion.jpg","move":"push","duration":7,"caption":"La salle de réunion"}
+  {"type":"image","src":"assets/img/photos/hero-salle-reunion.jpg","move":"push","duration":7}
 ]
 </script>
 
 <div class="ribbon" aria-hidden="true">
   <div class="ribbon-track">
-    <span>Commissariat aux comptes</span><i></i><span>Conseil fiscal</span><i></i><span>Paie et DSN</span><i></i><span>Approbation des comptes</span><i></i><span>Création d'entreprise</span><i></i><span>Transmission</span><i></i><span>Holding</span><i></i><span>Facturation électronique</span><i></i>
-    <span>Commissariat aux comptes</span><i></i><span>Conseil fiscal</span><i></i><span>Paie et DSN</span><i></i><span>Approbation des comptes</span><i></i><span>Création d'entreprise</span><i></i><span>Transmission</span><i></i><span>Holding</span><i></i><span>Facturation électronique</span><i></i>
+    <span>Expertise comptable</span><i></i><span>Commissariat aux comptes</span><i></i><span>Croissance externe</span><i></i><span>Transmission d'entreprise</span><i></i><span>Ingénierie patrimoniale</span><i></i><span>Stratégie fiscale</span><i></i><span>DAF externalisé</span><i></i><span>Conseil social et ressources humaines</span><i></i>
+    <span>Expertise comptable</span><i></i><span>Commissariat aux comptes</span><i></i><span>Croissance externe</span><i></i><span>Transmission d'entreprise</span><i></i><span>Ingénierie patrimoniale</span><i></i><span>Stratégie fiscale</span><i></i><span>DAF externalisé</span><i></i><span>Conseil social et ressources humaines</span><i></i>
   </div>
 </div>
 
@@ -145,10 +145,8 @@
     </div>
     <div class="marquee-wrap reveal">
       <div class="marquee">
-        <span class="marquee-item">Client A</span><span class="marquee-item">Client B</span><span class="marquee-item">Client C</span>
-        <span class="marquee-item">Client D</span><span class="marquee-item">Client E</span><span class="marquee-item">Client F</span>
-        <span class="marquee-item">Client A</span><span class="marquee-item">Client B</span><span class="marquee-item">Client C</span>
-        <span class="marquee-item">Client D</span><span class="marquee-item">Client E</span><span class="marquee-item">Client F</span>
+        <span class="marquee-item">Belambra</span><span class="marquee-item">Malherbe</span><span class="marquee-item">ATGT</span><span class="marquee-item">Dubernard</span><span class="marquee-item">GEFIP</span><span class="marquee-item">Belambra</span><span class="marquee-item">Malherbe</span><span class="marquee-item">ATGT</span><span class="marquee-item">Dubernard</span><span class="marquee-item">GEFIP</span><span class="marquee-item">Belambra</span><span class="marquee-item">Malherbe</span><span class="marquee-item">ATGT</span><span class="marquee-item">Dubernard</span><span class="marquee-item">GEFIP</span>
+        <span class="marquee-item">Belambra</span><span class="marquee-item">Malherbe</span><span class="marquee-item">ATGT</span><span class="marquee-item">Dubernard</span><span class="marquee-item">GEFIP</span><span class="marquee-item">Belambra</span><span class="marquee-item">Malherbe</span><span class="marquee-item">ATGT</span><span class="marquee-item">Dubernard</span><span class="marquee-item">GEFIP</span><span class="marquee-item">Belambra</span><span class="marquee-item">Malherbe</span><span class="marquee-item">ATGT</span><span class="marquee-item">Dubernard</span><span class="marquee-item">GEFIP</span>
       </div>
     </div>
   </div>
@@ -193,14 +191,14 @@
       <span class="eyebrow">À chaque étape</span>
       <h2>Le bon interlocuteur, au bon moment.</h2>
     </div>
-    <div class="et-tabs reveal" role="tablist" aria-label="Les étapes de votre entreprise"><button type="button" role="tab" class="et-tab is-active" id="et-tab-creer" aria-controls="et-creer" aria-selected="true" data-i="0">Je crée</button><button type="button" role="tab" class="et-tab" id="et-tab-piloter" aria-controls="et-piloter" aria-selected="false" data-i="1">Je pilote</button><button type="button" role="tab" class="et-tab" id="et-tab-securiser" aria-controls="et-securiser" aria-selected="false" data-i="2">Je sécurise</button><button type="button" role="tab" class="et-tab" id="et-tab-transmettre" aria-controls="et-transmettre" aria-selected="false" data-i="3">Je transmets</button><button type="button" role="tab" class="et-tab" id="et-tab-patrimoine" aria-controls="et-patrimoine" aria-selected="false" data-i="4">Patrimoine</button></div>
+    <div class="et-tabs reveal" role="tablist" aria-label="Les étapes de votre entreprise"><button type="button" role="tab" class="et-tab is-active" id="et-tab-creer" aria-controls="et-creer" aria-selected="true" data-i="0"><span class="et-tab-n">01</span><span class="et-tab-t">Je crée</span><span class="et-tab-kw">Statut · prévisionnel · fiscalité</span></button><button type="button" role="tab" class="et-tab" id="et-tab-piloter" aria-controls="et-piloter" aria-selected="false" data-i="1"><span class="et-tab-n">02</span><span class="et-tab-t">Je pilote</span><span class="et-tab-kw">Pennylane · tableaux de bord · DAF</span></button><button type="button" role="tab" class="et-tab" id="et-tab-developper" aria-controls="et-developper" aria-selected="false" data-i="2"><span class="et-tab-n">03</span><span class="et-tab-t">Je développe</span><span class="et-tab-kw">Acquisition · évaluation · financement</span></button><button type="button" role="tab" class="et-tab" id="et-tab-securiser" aria-controls="et-securiser" aria-selected="false" data-i="3"><span class="et-tab-n">04</span><span class="et-tab-t">Je sécurise</span><span class="et-tab-kw">Commissariat aux comptes · audit</span></button><button type="button" role="tab" class="et-tab" id="et-tab-transmettre" aria-controls="et-transmettre" aria-selected="false" data-i="4"><span class="et-tab-n">05</span><span class="et-tab-t">Je transmets</span><span class="et-tab-kw">Cession · holding · famille</span></button></div>
     <div class="et-panels reveal"><div class="et-panel is-active" id="et-creer" role="tabpanel" aria-labelledby="et-tab-creer">
       <div class="et-img"><div class="et-zoom" style="background-image:url('https://images.pexels.com/photos/6077447/pexels-photo-6077447.jpeg?auto=compress&cs=tinysrgb&w=1400');"></div></div>
       <div class="et-body">
         <span class="eyebrow">01 · Création</span>
         <h3>Lancer votre entreprise sur des bases solides.</h3>
-        <p>Statuts, prévisionnel, choix fiscal et social : nous structurons votre projet pour que vous puissiez vous consacrer à votre activité.</p>
-        <ul class="et-list"><li>Choix de la structure juridique</li><li>Business plan et prévisionnel</li><li>Immatriculation et formalités</li></ul>
+        <p>Statut juridique, compte prévisionnel, choix du régime fiscal et social : nous structurons votre projet pour que vous puissiez vous consacrer à votre activité.</p>
+        <ul class="et-list"><li>Choix du statut juridique</li><li>Compte prévisionnel et business plan</li><li>Choix du régime fiscal et social</li></ul>
         <div class="et-ctas"><a href="parcours.html#creer" class="btn-primary">Découvrir cette étape</a><a href="contact.html" class="btn-ghost">Parler à un expert</a></div>
       </div>
     </div><div class="et-panel" id="et-piloter" role="tabpanel" aria-labelledby="et-tab-piloter" hidden>
@@ -208,14 +206,23 @@
       <div class="et-body">
         <span class="eyebrow">02 · Pilotage</span>
         <h3>Décider avec des chiffres fiables, chaque mois.</h3>
-        <p>Comptabilité, tableaux de bord, trésorerie : votre expert transforme vos données en indicateurs utiles et vous alerte avant qu'il ne soit trop tard.</p>
-        <ul class="et-list"><li>Expertise comptable et comptes annuels</li><li>Tableau de bord mensuel</li><li>Paie et déclarations sociales</li></ul>
+        <p>Avec Pennylane, votre comptabilité est à jour en continu. Votre expert transforme vos données en indicateurs utiles et peut aller jusqu'à une mission de DAF externalisé.</p>
+        <ul class="et-list"><li>Comptabilité en temps réel sur Pennylane</li><li>Tableau de bord et prévisionnel de trésorerie</li><li>DAF externalisé</li></ul>
         <div class="et-ctas"><a href="parcours.html#piloter" class="btn-primary">Découvrir cette étape</a><a href="contact.html" class="btn-ghost">Parler à un expert</a></div>
+      </div>
+    </div><div class="et-panel" id="et-developper" role="tabpanel" aria-labelledby="et-tab-developper" hidden>
+      <div class="et-img"><div class="et-zoom" style="background-image:url('assets/img/photos/salle-reunion.jpg');"></div></div>
+      <div class="et-body">
+        <span class="eyebrow">03 · Croissance et financement</span>
+        <h3>Grandir par acquisition, financer votre croissance.</h3>
+        <p>Croissance externe, évaluation, audit d'acquisition, financement : nous sécurisons chaque étape de l'opération, aux côtés de vos avocats et de vos banquiers.</p>
+        <ul class="et-list"><li>Croissance externe</li><li>Évaluation et audit d'acquisition</li><li>Recherche de financement</li></ul>
+        <div class="et-ctas"><a href="parcours.html#developper" class="btn-primary">Découvrir cette étape</a><a href="contact.html" class="btn-ghost">Parler à un expert</a></div>
       </div>
     </div><div class="et-panel" id="et-securiser" role="tabpanel" aria-labelledby="et-tab-securiser" hidden>
       <div class="et-img"><div class="et-zoom" style="background-image:url('https://images.pexels.com/photos/7691715/pexels-photo-7691715.jpeg?auto=compress&cs=tinysrgb&w=1400');"></div></div>
       <div class="et-body">
-        <span class="eyebrow">03 · Conformité et audit</span>
+        <span class="eyebrow">04 · Conformité et audit</span>
         <h3>Des comptes certifiés, une conformité maîtrisée.</h3>
         <p>Commissariat aux comptes, audit contractuel, conformité fiscale et juridique pour les PME et les filiales de groupes internationaux.</p>
         <ul class="et-list"><li>Commissariat aux comptes</li><li>Audit contractuel</li><li>Secrétariat juridique</li></ul>
@@ -224,20 +231,11 @@
     </div><div class="et-panel" id="et-transmettre" role="tabpanel" aria-labelledby="et-tab-transmettre" hidden>
       <div class="et-img"><div class="et-zoom" style="background-image:url('https://images.unsplash.com/photo-1758518729685-f88df7890776?auto=format&fit=crop&w=1400&q=80');"></div></div>
       <div class="et-body">
-        <span class="eyebrow">04 · Transmission</span>
+        <span class="eyebrow">05 · Transmission et patrimoine</span>
         <h3>Préparer la suite, sereinement.</h3>
-        <p>Évaluation, optimisation fiscale, accompagnement de la cession ou de la reprise : un projet mené avec méthode et discrétion.</p>
-        <ul class="et-list"><li>Évaluation d'entreprise</li><li>Optimisation fiscale et patrimoniale</li><li>Accompagnement de la cession ou de la reprise</li></ul>
+        <p>Cession, transmission familiale, structuration de votre patrimoine de dirigeant : un projet préparé avec méthode et discrétion.</p>
+        <ul class="et-list"><li>Évaluation et cession</li><li>Holding et structuration patrimoniale</li><li>Pacte Dutreil et transmission familiale</li></ul>
         <div class="et-ctas"><a href="parcours.html#transmettre" class="btn-primary">Découvrir cette étape</a><a href="contact.html" class="btn-ghost">Parler à un expert</a></div>
-      </div>
-    </div><div class="et-panel" id="et-patrimoine" role="tabpanel" aria-labelledby="et-tab-patrimoine" hidden>
-      <div class="et-img"><div class="et-zoom" style="background-image:url('https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=1400&q=80');"></div></div>
-      <div class="et-body">
-        <span class="eyebrow">05 · Missions d'exception</span>
-        <h3>Structurer votre patrimoine de dirigeant.</h3>
-        <p>Pour les moments qui sortent du cadre comptable, nos associés les plus expérimentés vous accompagnent personnellement, avec discrétion.</p>
-        <ul class="et-list"><li>Structuration patrimoniale</li><li>Levée de fonds</li><li>Holding et optimisation</li></ul>
-        <div class="et-ctas"><a href="parcours.html#patrimoine" class="btn-primary">Découvrir cette étape</a><a href="contact.html" class="btn-ghost">Parler à un expert</a></div>
       </div>
     </div></div>
   </div>
@@ -308,7 +306,7 @@
       <a href="bureaux/ferrieres.html" class="res-card reveal">
         <div class="media media-wide res-thumb" style="background-image:url('https://images.unsplash.com/photo-1568992687947-868a62a9f521?auto=format&fit=crop&w=500&q=80');"><div class="kb"></div><div class="tint"></div></div>
         <span class="eyebrow" style="margin-bottom:6px;">Seine-et-Marne</span>
-        <h3>IDFA</h3><p>19 Avenue James de Rothschild, 77164 Ferrières-en-Brie</p>
+        <h3>Auditec Bussy</h3><p>19 Avenue James de Rothschild, 77164 Ferrières-en-Brie</p>
         <span class="lnk">Voir la fiche →</span>
       </a>
     </div>
@@ -371,10 +369,10 @@
     </div>
     <div class="foot-bottom">
       <span>© 2026 Auditec. Photographies des locaux : Laura Briault.</span>
-      <span>Mentions légales et politique de confidentialité à venir</span>
+      <span class="foot-legal"><a href="mentions-legales.html">Mentions légales</a><a href="mentions-legales.html#confidentialite">Politique de confidentialité</a></span>
     </div>
   </div>
 </footer>
-<script src="assets/js/main.js?v=27"></script>
+<script src="assets/js/main.js?v=33"></script>
 </body>
 </html>

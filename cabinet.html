@@ -8,12 +8,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Hanken+Grotesk:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=27">
+<link rel="stylesheet" href="assets/css/style.css?v=33">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 </head>
 <body>
 <nav id="nav">
-  <a href="index.html" class="logo" aria-label="Auditec, accueil"><img src="assets/img/logo-auditec.svg" alt="Auditec" class="logo-img logo-dark"><img src="assets/img/logo-auditec-blanc.svg" alt="" class="logo-img logo-light"></a>
+  <a href="index.html" class="logo" aria-label="Auditec, accueil"><picture class="logo-dark"><source media="(max-width: 700px)" srcset="assets/img/logo-auditec-court.svg"><img src="assets/img/logo-auditec.svg" alt="Auditec" class="logo-img"></picture><picture class="logo-light"><source media="(max-width: 700px)" srcset="assets/img/logo-auditec-court-blanc.svg"><img src="assets/img/logo-auditec-blanc.svg" alt="" class="logo-img"></picture></a>
   <div class="navlinks">
     <a href="index.html">Accueil</a>
     <div class="nav-item">
@@ -74,16 +74,21 @@
 <section class="section alt hx-section">
   <div class="wrap">
     <div class="split-head reveal"><div><span class="eyebrow">Notre histoire</span><h2>Cinquante ans aux côtés des dirigeants.</h2></div>
-      <p>Les grandes dates du cabinet, de sa création en 1976 à la naissance du groupe.</p></div>
-    <!-- Frise à compléter avec les dates fournies par Auditec : une ligne <li class="hx-item"> par étape -->
-    <div class="hx-scroll">
-      <ol class="hx-line">
-        <li class="hx-item reveal" style="--i:0"><span class="hx-dot"></span><span class="hx-year">Année</span><h3>Étape à venir</h3><p>Texte à compléter.</p></li>
-        <li class="hx-item reveal" style="--i:1"><span class="hx-dot"></span><span class="hx-year">Année</span><h3>Étape à venir</h3><p>Texte à compléter.</p></li>
-        <li class="hx-item reveal" style="--i:2"><span class="hx-dot"></span><span class="hx-year">Année</span><h3>Étape à venir</h3><p>Texte à compléter.</p></li>
-        <li class="hx-item reveal" style="--i:3"><span class="hx-dot"></span><span class="hx-year">Année</span><h3>Étape à venir</h3><p>Texte à compléter.</p></li>
-        <li class="hx-item reveal" style="--i:4"><span class="hx-dot"></span><span class="hx-year">Année</span><h3>Étape à venir</h3><p>Texte à compléter.</p></li>
-        <li class="hx-item reveal" style="--i:5"><span class="hx-dot"></span><span class="hx-year">Année</span><h3>Étape à venir</h3><p>Texte à compléter.</p></li>
+      <p>De la création d'Auditec en 1976 au groupe d'aujourd'hui : les grandes dates du cabinet.</p></div>
+    <div class="ht-scroll">
+      <ol class="ht">
+        <li class="ht-axis" aria-hidden="true"></li>
+      <li class="ht-year" style="grid-column:1;--i:1;--o:0" aria-hidden="true"><span class="ht-dot"></span><span class="ht-y">1976</span></li>
+      <li class="ht-year" style="grid-column:2;--i:2;--o:3" aria-hidden="true"><span class="ht-dot"></span><span class="ht-y">2002</span></li>
+      <li class="ht-year" style="grid-column:3;--i:3;--o:5" aria-hidden="true"><span class="ht-dot"></span><span class="ht-y">2010</span></li>
+      <li class="ht-year" style="grid-column:4;--i:4;--o:7" aria-hidden="true"><span class="ht-dot"></span><span class="ht-y">2011</span></li>
+      <li class="ht-year" style="grid-column:5;--i:5;--o:9" aria-hidden="true"><span class="ht-dot"></span><span class="ht-y">2020 à 2026</span></li>
+      <li class="ht-card ht-top reveal" style="grid-column:1;--i:1;--o:1"><h3>Création d'Auditec</h3><p>Jean-Pierre Pernin et Alain Coiffard fondent Auditec, avec une clientèle très orientée vers l'audiovisuel.</p></li>
+      <li class="ht-card ht-bot reveal" style="grid-column:1;--i:1;--o:2"><h3>Création de Fideci</h3><p>M. Claude Dubus crée le cabinet Fideci.</p></li>
+      <li class="ht-card ht-top reveal" style="grid-column:2;--i:2;--o:4"><h3>Reprise de Fideci</h3><p>Le 1er janvier, Ghislain Héry reprend le capital de Fideci.</p></li>
+      <li class="ht-card ht-bot reveal" style="grid-column:3;--i:3;--o:6"><h3>Neveux et Associés</h3><p>Fideci rachète le cabinet Neveux et Associés.</p></li>
+      <li class="ht-card ht-top reveal" style="grid-column:4;--i:4;--o:8"><h3>Naissance du groupe Auditec Paris</h3><p>Ghislain Héry rachète Auditec et crée le groupe. En septembre, Thierry Bureau rejoint le cabinet.</p></li>
+      <li class="ht-card ht-bot reveal" style="grid-column:5;--i:5;--o:10"><h3>Le groupe s'agrandit</h3><p>Expertica (2020), Touchais et Associés et IDFA (2024), VRM Audit (2025), puis Alliance Audit (2026) rejoignent le groupe.</p></li>
       </ol>
     </div>
   </div>
@@ -105,7 +110,7 @@
       <div class="reveal">
         <span class="eyebrow">Nos implantations</span>
         <h2>Trois adresses en Île-de-France.</h2>
-        <p style="color:var(--ink-dim);font-size:15.5px;line-height:1.8;margin-top:16px;">Paris, Houilles, Ferrières : rendez-vous au cabinet le plus proche de chez vous.</p>
+        <p style="color:var(--ink-dim);font-size:15.5px;line-height:1.8;margin-top:16px;">Paris, Houilles, Bussy : rendez-vous au cabinet le plus proche de chez vous.</p>
         <a href="bureaux/index.html" class="btn-ghost" style="margin-top:24px;display:inline-block;">Voir nos bureaux</a>
       </div>
       <div class="media media-square reveal" style="background-image:url('assets/img/photos/salle-reunion-large.jpg');">
@@ -177,10 +182,10 @@
     </div>
     <div class="foot-bottom">
       <span>© 2026 Auditec. Photographies des locaux : Laura Briault.</span>
-      <span>Mentions légales et politique de confidentialité à venir</span>
+      <span class="foot-legal"><a href="mentions-legales.html">Mentions légales</a><a href="mentions-legales.html#confidentialite">Politique de confidentialité</a></span>
     </div>
   </div>
 </footer>
-<script src="assets/js/main.js?v=27"></script>
+<script src="assets/js/main.js?v=33"></script>
 </body>
 </html>
