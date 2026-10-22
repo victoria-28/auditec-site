@@ -8,12 +8,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Hanken+Grotesk:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=27">
+<link rel="stylesheet" href="../assets/css/style.css?v=33">
 <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
 </head>
 <body>
 <nav id="nav">
-  <a href="../index.html" class="logo" aria-label="Auditec, accueil"><img src="../assets/img/logo-auditec.svg" alt="Auditec" class="logo-img logo-dark"><img src="../assets/img/logo-auditec-blanc.svg" alt="" class="logo-img logo-light"></a>
+  <a href="../index.html" class="logo" aria-label="Auditec, accueil"><picture class="logo-dark"><source media="(max-width: 700px)" srcset="../assets/img/logo-auditec-court.svg"><img src="../assets/img/logo-auditec.svg" alt="Auditec" class="logo-img"></picture><picture class="logo-light"><source media="(max-width: 700px)" srcset="../assets/img/logo-auditec-court-blanc.svg"><img src="../assets/img/logo-auditec-blanc.svg" alt="" class="logo-img"></picture></a>
   <div class="navlinks">
     <a href="../index.html">Accueil</a>
     <div class="nav-item">
@@ -93,6 +93,15 @@
     </div>
   </div>
 </section>
+<section class="section tight philo-section">
+  <div class="wrap">
+    <div class="philo reveal">
+      <span class="philo-k">Notre philosophie</span>
+      <h2 class="philo-t">Sécuriser vos procédures, <em>avant même de certifier.</em></h2>
+      <p class="philo-x">Achats, ventes, stocks, trésorerie, paie : nous analysons comment l'information est produite dans votre entreprise, identifions les zones de risque et vous proposons des procédures simples (séparation des tâches, circuits de validation, contrôles clés). Moins d'erreurs, moins de risque de fraude, des comptes plus fiables.</p>
+    </div>
+  </div>
+</section>
 <section class="section tight">
   <div class="wrap">
     <div class="devis-cta gradient-panel reveal">
@@ -151,10 +160,10 @@
     </div>
     <div class="foot-bottom">
       <span>© 2026 Auditec. Photographies des locaux : Laura Briault.</span>
-      <span>Mentions légales et politique de confidentialité à venir</span>
+      <span class="foot-legal"><a href="../mentions-legales.html">Mentions légales</a><a href="../mentions-legales.html#confidentialite">Politique de confidentialité</a></span>
     </div>
   </div>
 </footer>
-<script src="../assets/js/main.js?v=27"></script>
+<script src="../assets/js/main.js?v=33"></script>
 </body>
 </html>

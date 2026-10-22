@@ -8,12 +8,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Hanken+Grotesk:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=27">
+<link rel="stylesheet" href="../assets/css/style.css?v=33">
 <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
 </head>
 <body>
 <nav id="nav">
-  <a href="../index.html" class="logo" aria-label="Auditec, accueil"><img src="../assets/img/logo-auditec.svg" alt="Auditec" class="logo-img logo-dark"><img src="../assets/img/logo-auditec-blanc.svg" alt="" class="logo-img logo-light"></a>
+  <a href="../index.html" class="logo" aria-label="Auditec, accueil"><picture class="logo-dark"><source media="(max-width: 700px)" srcset="../assets/img/logo-auditec-court.svg"><img src="../assets/img/logo-auditec.svg" alt="Auditec" class="logo-img"></picture><picture class="logo-light"><source media="(max-width: 700px)" srcset="../assets/img/logo-auditec-court-blanc.svg"><img src="../assets/img/logo-auditec-blanc.svg" alt="" class="logo-img"></picture></a>
   <div class="navlinks">
     <a href="../index.html">Accueil</a>
     <div class="nav-item">
@@ -82,15 +82,30 @@
       <h2>Le détail de chaque mission</h2>
       <p class="xp-hint">Cliquez sur une mission pour la découvrir.</p>
       <div class="term-list">
+          <button class="term-item" type="button"><span>Comptabilité sur Pennylane</span><span class="term-plus">+</span></button>
+          <div class="term-desc"><p>Avec Pennylane, votre comptabilité est tenue à jour en continu : banque connectée, factures et justificatifs centralisés, chiffres consultables à tout moment. Vous suivez votre activité en temps réel, et votre équipe dédiée assure la révision.</p></div>
           <button class="term-item" type="button"><span>Tenue et révision comptable</span><span class="term-plus">+</span></button>
           <div class="term-desc"><p>La tenue comptable consiste à enregistrer au fil de l'eau toutes les opérations de votre entreprise (achats, ventes, salaires...). La révision, c'est le contrôle de cohérence effectué par notre cabinet avant chaque clôture, pour s'assurer que ces chiffres sont exacts.</p></div>
           <button class="term-item" type="button"><span>Comptes annuels et liasse fiscale</span><span class="term-plus">+</span></button>
           <div class="term-desc"><p>Une fois par an, nous arrêtons les comptes de l'exercice pour établir votre bilan, votre compte de résultat et leurs annexes, puis nous préparons et télétransmettons votre liasse fiscale à l'administration, dans les délais.</p></div>
+          <button class="term-item" type="button"><span>Conseil en gestion</span><span class="term-plus">+</span></button>
+          <div class="term-desc"><p>Une comptabilité ne doit pas seulement retracer le passé : elle doit éclairer vos décisions. Nous vous aidons à décrypter vos résultats, identifier vos leviers de rentabilité et anticiper les évolutions de votre activité. Pour que chaque décision repose sur une vision claire, fiable et maîtrisée de votre entreprise.</p></div>
+          <button class="term-item" type="button"><span>DAF externalisé</span><span class="term-plus">+</span></button>
+          <div class="term-desc"><p>La performance ne s'improvise pas, elle se pilote. Nous mettons notre expertise financière au service de vos ambitions : prévisions de trésorerie, budgets, analyse de rentabilité et indicateurs de performance. Vous bénéficiez d'une vision stratégique de vos finances et d'un accompagnement dans vos décisions clés, sans recruter un directeur financier à temps plein.</p></div>
           <button class="term-item" type="button"><span>Déclarations fiscales (TVA, IS, CFE...)</span><span class="term-plus">+</span></button>
           <div class="term-desc"><p>Selon votre activité, votre entreprise doit déclarer et payer plusieurs impôts et taxes : la TVA (souvent mensuelle ou trimestrielle), l'impôt sur les sociétés (IS), la cotisation foncière des entreprises (CFE), entre autres. Nous préparons et transmettons ces déclarations dans les délais légaux.</p></div>
           <button class="term-item" type="button"><span>Tableaux de bord et reporting mensuel</span><span class="term-plus">+</span></button>
           <div class="term-desc"><p>Un document synthétique et régulier qui vous donne une lecture claire de vos indicateurs clés : chiffre d'affaires, trésorerie, marge, charges. Il vous permet de prendre des décisions en cours d'année, sans attendre la clôture annuelle.</p></div>
         </div>
+    </div>
+  </div>
+</section>
+<section class="section tight philo-section">
+  <div class="wrap">
+    <div class="philo reveal">
+      <span class="philo-k">Notre philosophie</span>
+      <h2 class="philo-t">Des comptes arrêtés avec vous, <em>jamais imposés.</em></h2>
+      <p class="philo-x">Provisions, stocks, choix comptables : chaque arbitrage est discuté avec vous lors du rendez-vous de bilan. Nous vous exposons les options et leurs conséquences, et les comptes ne sont arrêtés qu'en accord avec vous. Vous comprenez vos chiffres, et vous savez les défendre.</p>
     </div>
   </div>
 </section>
@@ -152,10 +167,10 @@
     </div>
     <div class="foot-bottom">
       <span>© 2026 Auditec. Photographies des locaux : Laura Briault.</span>
-      <span>Mentions légales et politique de confidentialité à venir</span>
+      <span class="foot-legal"><a href="../mentions-legales.html">Mentions légales</a><a href="../mentions-legales.html#confidentialite">Politique de confidentialité</a></span>
     </div>
   </div>
 </footer>
-<script src="../assets/js/main.js?v=27"></script>
+<script src="../assets/js/main.js?v=33"></script>
 </body>
 </html>

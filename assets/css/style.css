@@ -1109,3 +1109,147 @@ nav.scrolled{padding-top:16px;padding-bottom:16px;}
 .bx-hero-video .bx-region{fill:var(--bg-alt);}
 @media (prefers-reduced-motion: reduce){.bx-video{display:none;}}
 .bx-hero h1 em{white-space:nowrap;}
+
+/* Pied de page : liens légaux */
+.foot-legal{display:flex;gap:22px;flex-wrap:wrap;}
+.foot-legal a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;transition:border-color .2s,color .2s;}
+.foot-legal a:hover{color:var(--gold-soft);border-bottom-color:var(--gold-soft);}
+/* Page Mentions légales */
+.ml-hero .reveal{padding-top:150px;}
+.ml-hero h1{font-size:clamp(40px,5vw,64px);}
+.ml-wrap{max-width:880px;}
+.ml-block{padding:38px 0;border-top:1px solid var(--border);scroll-margin-top:110px;}
+.ml-block:first-of-type{border-top:none;padding-top:0;}
+.ml-block h2{font-size:clamp(26px,2.6vw,34px);margin-bottom:16px;}
+.ml-block h3{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:500;margin:24px 0 8px;}
+.ml-block p{font-size:15.5px;line-height:1.75;color:var(--ink-dim);margin-bottom:12px;}
+.ml-block a{color:var(--navy);}
+.ml-list{display:grid;grid-template-columns:230px 1fr;border-top:1px solid var(--border);margin-top:10px;}
+.ml-list dt,.ml-list dd{padding:11px 0;border-bottom:1px solid var(--border);font-size:15px;}
+.ml-list dt{color:var(--ink-faint);}
+.ml-list dd{color:var(--ink);}
+.todo{color:var(--gold);font-style:italic;}
+.ml-date{margin-top:20px;font-size:13.5px;color:var(--ink-faint);}
+@media(max-width:700px){.ml-list{grid-template-columns:1fr;}.ml-list dt{border-bottom:none;padding-bottom:0;}}
+
+/* Logo 2026 (avec « Depuis 1976 ») : plus haut, on le dimensionne en largeur */
+.logo picture{display:block;}
+.logo-img,nav.scrolled .logo-img{height:auto;width:200px;transition:width .3s;}
+nav.scrolled .logo-img{width:176px;}
+.foot-logo-img{height:auto;width:230px;}
+@media(max-width:960px){.logo-img,nav.scrolled .logo-img{width:170px;height:auto;}}
+@media(max-width:700px){.logo-img,nav.scrolled .logo-img{width:150px;}}
+.logo picture.logo-light{display:none;}
+body.dark-hero nav:not(.scrolled) .logo picture.logo-dark{display:none;}
+body.dark-hero nav:not(.scrolled) .logo picture.logo-light{display:block;}
+/* Mobile : le haut des pages ne passe plus sous le menu */
+@media(max-width:960px){.page-hero.wrap{padding-top:130px;padding-bottom:56px;}}
+
+/* =========================================================
+   V8 - Retours d'octobre
+   ========================================================= */
+/* Bandeau défilant : plus rapide */
+.ribbon-track{animation-duration:55s;}
+/* Clients */
+.marquee-item{font-family:'Cormorant Garamond',Garamond,serif;font-size:28px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--navy-deep);opacity:.55;transition:opacity .3s;}
+.marquee-item:hover{opacity:1;}
+.marquee{gap:88px;animation-duration:32s;}
+/* Onglets des étapes avec mots-clés */
+.et-tabs{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;}
+.et-tab{display:flex;flex-direction:column;align-items:flex-start;gap:4px;text-align:left;border-radius:10px;padding:16px 18px;}
+.et-tab-n{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--gold);letter-spacing:.08em;}
+.et-tab-t{font-family:'Cormorant Garamond',Garamond,serif;font-size:22px;font-weight:500;line-height:1.1;}
+.et-tab-kw{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-faint);line-height:1.5;}
+.et-tab.is-active .et-tab-n,.et-tab.is-active .et-tab-kw{color:var(--gold-soft);}
+@media(max-width:960px){.et-tabs{grid-template-columns:repeat(5,minmax(150px,1fr));overflow-x:auto;padding-bottom:6px;}}
+/* Parcours : citation */
+.pc-quote{margin:18px 0 6px;padding-left:18px;border-left:2px solid var(--gold);font-family:'Cormorant Garamond',Garamond,serif;font-style:italic;font-size:24px;line-height:1.35;color:var(--navy);}
+/* Nos métiers : encart philosophie */
+.philo-section{padding-top:10px;}
+.philo{position:relative;background:var(--navy-deep);color:var(--white);border-radius:8px;padding:56px 64px 56px 88px;overflow:hidden;}
+.philo::before{content:'';position:absolute;left:56px;top:58px;bottom:58px;width:1px;background:var(--gold-soft);opacity:.7;}
+.philo-k{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-soft);}
+.philo-t{font-family:'Cormorant Garamond',Garamond,serif;font-weight:500;font-size:clamp(28px,3vw,40px);line-height:1.15;color:var(--white);margin:12px 0 16px;max-width:760px;}
+.philo-t em{color:var(--gold-soft);}
+.philo-x{font-size:16px;line-height:1.8;color:rgba(255,255,255,.78);max-width:820px;}
+@media(max-width:700px){.philo{padding:36px 26px 36px 44px;}.philo::before{left:24px;top:38px;bottom:38px;}}
+/* Le cabinet : frise verticale de l'histoire */
+.hv-line{list-style:none;position:relative;max-width:980px;margin:56px auto 0;padding:0;}
+.hv-line::before{content:'';position:absolute;left:50%;top:0;bottom:0;width:1px;background:var(--border);transform:translateX(-50%);}
+.hv-line::after{content:'';position:absolute;left:50%;top:0;width:1px;height:0;background:var(--gold);transform:translateX(-50%);transition:height 3s cubic-bezier(.22,1,.36,1);}
+.hx-section.in-view .hv-line::after{height:100%;}
+.hv-item{position:relative;width:50%;padding:0 48px 34px 0;}
+.hv-item:nth-child(even){margin-left:50%;padding:0 0 34px 48px;}
+.hv-dot{position:absolute;top:22px;right:-7px;width:14px;height:14px;border-radius:50%;background:var(--white);border:2px solid var(--gold);z-index:1;transition:background .3s;}
+.hv-item:nth-child(even) .hv-dot{right:auto;left:-7px;}
+.hv-item:hover .hv-dot{background:var(--gold);}
+.hv-card{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:22px 26px;transition:transform .35s cubic-bezier(.22,1,.36,1),box-shadow .35s;}
+.hv-item:hover .hv-card{transform:translateY(-3px);box-shadow:0 18px 40px -28px rgba(18,41,67,.4);}
+.hv-year{display:block;font-family:'Cormorant Garamond',Garamond,serif;font-size:38px;line-height:1;color:var(--gold);margin-bottom:8px;}
+.hv-card h3{font-family:'Hanken Grotesk',sans-serif;font-size:17px;font-weight:600;color:var(--navy-deep);margin-bottom:6px;}
+.hv-card p{font-size:14.5px;line-height:1.65;color:var(--ink-dim);}
+.hv-item.reveal{transform:translateX(-24px);}
+.hv-item:nth-child(even).reveal{transform:translateX(24px);}
+.hv-item.reveal.in{transform:none;}
+@media(max-width:760px){
+  .hv-line::before,.hv-line::after{left:7px;transform:none;}
+  .hv-item,.hv-item:nth-child(even){width:auto;margin-left:0;padding:0 0 26px 36px;}
+  .hv-dot,.hv-item:nth-child(even) .hv-dot{left:0;right:auto;}
+  .hv-item.reveal,.hv-item:nth-child(even).reveal{transform:translateY(20px);}
+}
+/* Ressources : notes d'information */
+#notes{scroll-margin-top:110px;}
+.notes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.note-card{display:flex;gap:18px;align-items:flex-start;background:var(--white);border:1px solid var(--border);border-radius:8px;padding:26px;text-decoration:none;color:inherit;transition:border-color .25s,transform .35s cubic-bezier(.22,1,.36,1);}
+a.note-card:hover{border-color:var(--navy-deep);transform:translateY(-4px);}
+.note-icon{flex-shrink:0;width:44px;height:54px;border:1px solid var(--gold);border-radius:4px;display:flex;align-items:flex-end;justify-content:center;padding-bottom:8px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.08em;color:var(--gold);}
+.note-date{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);}
+.note-card h3{font-family:'Cormorant Garamond',Garamond,serif;font-size:23px;font-weight:500;color:var(--navy-deep);margin:4px 0 8px;}
+.note-dl{font-size:13.5px;color:var(--gold);}
+.note-todo .note-dl{color:var(--ink-faint);font-style:italic;}
+@media(max-width:960px){.notes-grid{grid-template-columns:1fr;}}
+/* Le cabinet : frise horizontale (remplace la frise verticale) */
+.ht-scroll{margin-top:48px;}
+.ht{list-style:none;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));grid-template-rows:auto 96px auto;column-gap:22px;position:relative;padding:0;}
+.ht-axis{grid-column:1/-1;grid-row:2;position:relative;}
+.ht-axis::before,.ht-axis::after{content:'';position:absolute;left:0;top:50%;height:1px;transform:translateY(-.5px);}
+.ht-axis::before{right:0;background:var(--border);}
+.ht-axis::after{width:0;background:var(--gold);transition:width 2.6s cubic-bezier(.22,1,.36,1);}
+.hx-section.in-view .ht-axis::after{width:100%;}
+.ht-year{grid-row:2;position:relative;display:flex;align-items:center;justify-content:center;z-index:1;}
+.ht-dot{position:absolute;left:50%;top:50%;width:14px;height:14px;margin:-7px 0 0 -7px;border-radius:50%;background:var(--bg-alt);border:2px solid var(--gold);transition:transform .4s,background .4s;transition-delay:calc(var(--i) * .25s);}
+.hx-section.in-view .ht-dot{background:var(--gold);}
+.ht-y{position:relative;background:var(--bg-alt);padding:0 12px;font-family:'Cormorant Garamond',Garamond,serif;font-size:clamp(26px,2.6vw,36px);line-height:1;color:var(--navy-deep);white-space:nowrap;transform:translateY(-34px);}
+.ht-card{position:relative;background:var(--white);border:1px solid var(--border);border-radius:8px;padding:20px 22px;transition:transform .35s cubic-bezier(.22,1,.36,1),box-shadow .35s;transition-delay:calc(var(--i) * .12s);}
+.ht-card:hover{transform:translateY(-3px);box-shadow:0 18px 40px -28px rgba(18,41,67,.4);}
+.ht-top{grid-row:1;align-self:end;margin-bottom:6px;}
+.ht-bot{grid-row:3;align-self:start;margin-top:6px;}
+.ht-card::after{content:'';position:absolute;left:50%;width:1px;height:42px;background:var(--gold);opacity:.6;}
+.ht-top::after{top:100%;}
+.ht-bot::after{bottom:100%;}
+.ht-card h3{font-family:'Hanken Grotesk',sans-serif;font-size:15.5px;font-weight:600;color:var(--navy-deep);margin-bottom:6px;}
+.ht-card p{font-size:13.5px;line-height:1.6;color:var(--ink-dim);}
+/* l'année reste lisible au-dessus du trait quand une carte est en dessous, et inversement */
+.ht-year:nth-child(2) .ht-y,.ht-year:nth-child(4) .ht-y,.ht-year:nth-child(6) .ht-y{transform:translateY(-34px);}
+@media(max-width:860px){
+  .ht{display:block;border-left:1px solid var(--gold);margin-left:8px;padding-left:24px;}
+  .ht-axis{display:none;}
+  .ht-year{justify-content:flex-start;margin:22px 0 8px;}
+  .ht-year:first-of-type{margin-top:0;}
+  .ht-dot{left:-31px;}
+  .ht-y,.ht-year:nth-child(n) .ht-y{transform:none;background:none;padding:0;font-size:28px;}
+  .ht-card{margin:0 0 10px;}
+  .ht-card::after{display:none;}
+}
+@media(max-width:860px){.ht{display:flex;flex-direction:column;}}
+/* frise : l'année posée sur le trait, en pastille */
+.ht-y,.ht-year:nth-child(n) .ht-y{transform:none;border:1px solid var(--gold);border-radius:999px;padding:6px 18px;background:var(--bg-alt);transition:background .5s,color .5s;transition-delay:calc(var(--i) * .25s);}
+.hx-section.in-view .ht-y{background:var(--navy-deep);color:var(--white);border-color:var(--navy-deep);}
+.ht-dot{display:none;}
+.ht-card::after{height:30px;}
+@media(max-width:860px){
+  .ht > li{order:var(--o);}
+  .ht-dot{display:block;left:-31px;top:50%;}
+  .ht-y,.ht-year:nth-child(n) .ht-y{border:none;padding:0;background:none;color:var(--navy-deep);}
+  .hx-section.in-view .ht-y{background:none;color:var(--navy-deep);}
+}

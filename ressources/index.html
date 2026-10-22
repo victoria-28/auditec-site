@@ -8,12 +8,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Hanken+Grotesk:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css?v=27">
+<link rel="stylesheet" href="../assets/css/style.css?v=33">
 <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
 </head>
 <body class="page-res">
 <nav id="nav">
-  <a href="../index.html" class="logo" aria-label="Auditec, accueil"><img src="../assets/img/logo-auditec.svg" alt="Auditec" class="logo-img logo-dark"><img src="../assets/img/logo-auditec-blanc.svg" alt="" class="logo-img logo-light"></a>
+  <a href="../index.html" class="logo" aria-label="Auditec, accueil"><picture class="logo-dark"><source media="(max-width: 700px)" srcset="../assets/img/logo-auditec-court.svg"><img src="../assets/img/logo-auditec.svg" alt="Auditec" class="logo-img"></picture><picture class="logo-light"><source media="(max-width: 700px)" srcset="../assets/img/logo-auditec-court-blanc.svg"><img src="../assets/img/logo-auditec-blanc.svg" alt="" class="logo-img"></picture></a>
   <div class="navlinks">
     <a href="../index.html">Accueil</a>
     <div class="nav-item">
@@ -64,7 +64,7 @@
         <h1>Ce que les dirigeants <em>doivent anticiper.</em></h1>
         <p class="lead">La réglementation évolue plus vite que vos équipes ne peuvent suivre seules. Simulateurs, calendrier et dossiers pratiques pour garder une longueur d'avance et démontrer, au fil des sujets, l'expertise du cabinet.</p>
         <div class="res-chips">
-          <a href="#outils">Vos outils</a><a href="#simulateurs">Simulateurs</a><a href="#echeancier">Calendrier</a><a href="#articles">Articles et dossiers</a>
+          <a href="#outils">Vos outils</a><a href="#simulateurs">Simulateurs</a><a href="#echeancier">Calendrier</a><a href="#notes">Notes d'information</a><a href="#articles">Articles et dossiers</a>
         </div>
       </div>
       <div class="xp-hero-img"><div class="xp-hero-zoom" style="background-image:url('../assets/img/photos/lounge.jpg');background-position:center 60%;"></div></div>
@@ -94,11 +94,10 @@
         <span class="outil-desc">Paie et RH : bulletins de salaire, congés, absences et documents salariés</span>
         <span class="outil-go">Se connecter ↗</span>
       </a>
-      <!-- iSuite : chaque cabinet a sa propre adresse de connexion ; remplacer href par celle d'Auditec -->
-      <a class="outil reveal" href="../contact.html">
-        <span class="outil-head"><span class="outil-logo outil-logo-txt" aria-hidden="true">i</span><span class="outil-name">iSuite</span></span>
-        <span class="outil-desc">Dépôt et consultation de vos pièces, indicateurs et échanges sécurisés avec le cabinet</span>
-        <span class="outil-go">Se connecter →</span>
+      <a class="outil reveal" href="https://www.revisaudit.fr/" target="_blank" rel="noopener">
+        <span class="outil-head"><img onerror="this.outerHTML='<span class=&quot;outil-logo outil-logo-txt&quot; aria-hidden=&quot;true&quot;>R</span>'" class="outil-logo" src="https://www.google.com/s2/favicons?domain=revisaudit.fr&sz=128" alt="" width="40" height="40"><span class="outil-name">Revisaudit</span></span>
+        <span class="outil-desc">Vos missions d'audit : échange sécurisé des documents avec votre commissaire aux comptes</span>
+        <span class="outil-go">Se connecter ↗</span>
       </a>
       <a class="outil outil-help reveal" href="../contact.html">
         <span class="outil-head"><span class="outil-name">Besoin d'aide ?</span></span>
@@ -164,6 +163,22 @@
       <p class="ech-note">Calendrier indicatif pour une société à l'IS clôturant au 31 décembre. Vos dates exactes figurent dans votre espace dirigeant.</p>
     </div>
     <ol class="ech-list reveal" id="echList"></ol>
+  </div>
+</section>
+
+<section class="section notes-section" id="notes">
+  <div class="wrap">
+    <div class="split-head reveal">
+      <span class="eyebrow">Notes d'information</span>
+      <h2>Les notes adressées à nos clients.</h2>
+      <p>Lois de finances, réformes sociales, nouvelles obligations : retrouvez les notes d'information envoyées par le cabinet, à télécharger en PDF.</p>
+    </div>
+    <!-- Notes d'information : remplacer chaque carte par un lien vers le PDF (classe note-card, sans note-todo) -->
+    <div class="notes-grid stagger">
+      <div class="note-card note-todo reveal"><span class="note-icon" aria-hidden="true">PDF</span><div><span class="note-date">Note d'information</span><h3>Actualité fiscale</h3><span class="note-dl">Bientôt disponible</span></div></div>
+      <div class="note-card note-todo reveal"><span class="note-icon" aria-hidden="true">PDF</span><div><span class="note-date">Note d'information</span><h3>Actualité sociale</h3><span class="note-dl">Bientôt disponible</span></div></div>
+      <div class="note-card note-todo reveal"><span class="note-icon" aria-hidden="true">PDF</span><div><span class="note-date">Note d'information</span><h3>Actualité juridique</h3><span class="note-dl">Bientôt disponible</span></div></div>
+    </div>
   </div>
 </section>
 
@@ -268,11 +283,11 @@
     </div>
     <div class="foot-bottom">
       <span>© 2026 Auditec. Photographies des locaux : Laura Briault.</span>
-      <span>Mentions légales et politique de confidentialité à venir</span>
+      <span class="foot-legal"><a href="../mentions-legales.html">Mentions légales</a><a href="../mentions-legales.html#confidentialite">Politique de confidentialité</a></span>
     </div>
   </div>
 </footer>
-<script src="../assets/js/main.js?v=27"></script>
-<script src="../assets/js/ressources.js?v=27"></script>
+<script src="../assets/js/main.js?v=33"></script>
+<script src="../assets/js/ressources.js?v=33"></script>
 </body>
 </html>
